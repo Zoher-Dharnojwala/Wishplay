@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wishplay | AI Afi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8f8f8;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      border-bottom: 1px dotted #bbb;
+      background: #fff;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .logo .w { color: #1ba1f2; }
+    .logo .i { color: #7ecf27; }
+    .logo .s { color: #ffc107; }
+    .logo .h { color: #ff4081; }
+    .logo .play { color: #555; }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .hidden { display: none !important; }
+
+    #start-overlay {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #fff;
+      padding: 20px;
+    }
+
+    .avatar-image {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 4px solid #e0e0e0;
+    }
+
+    .avatar-name {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #1a1a1a;
+      margin-bottom: 1rem;
+    }
+
+    #categorySelect {
+      margin-bottom: 20px;
+      padding: 10px 15px;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: 2px solid #ddd;
+    }
+
+    .start-call-btn {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 25px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .start-call-btn:hover {
+      background: #333;
+      transform: scale(1.05);
+    }
+
+    #main-interface {
+      min-height: 100vh;
+      background: #ffffff;
+      padding-bottom: 20px;
+    }
+
+    .call-info {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      background: #fff;
+      color: #666;
+    }
+
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      height: calc(100vh - 20vh);
+    }
+
+    .left-column, .right-column {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .main-avatar-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .avatar-ring {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      padding: 8px;
+      background: linear-gradient(135deg, #ffb8a0, #ffd6c9);
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .avatar-ring.talking {
+      animation: pulse 2s ease-in-out infinite;
+      box-shadow: 0 0 30px rgba(255, 107, 53, 0.4);
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .main-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .main-name {
+      font-size: 28px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+    }
+
+    .status-badge {
+      background: #ffb8a0;
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .control-btn {
+      background: #fff;
+      border: 2px solid #ff4081;
+      border-radius: 10px;
+      padding: 12px 14px;
+      cursor: pointer;
+      font-size: 18px;
+      color: #ff4081;
+      transition: all 0.3s ease;
+    }
+
+    .control-btn:hover {
+      background: #ff4081;
+      color: #fff;
+    }
+
+    .end-call {
+      border-color: #ff0000;
+      color: #ff0000;
+    }
+
+    .end-call:hover {
+      background: #ff0000;
+      color: #fff;
+    }
+
+    .transcript-container {
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 15px;
+      height: 420px;
+      overflow-y: auto;
+    }
+
+    .transcript-message {
+      margin-bottom: 12px;
+    }
+
+    .transcript-message.ai .speaker { color: #7b61ff; font-weight: 600; }
+    .transcript-message.user .speaker { color: #ff4081; font-weight: 600; }
+    .transcript-message.system .speaker { color: #777; font-style: italic; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <span class="w">w</span><span class="i">i</span><span class="s">s</span><span class="h">h</span><span class="play">play</span>
+    </div>
+    <nav>
+  <ul>
+    <li><a href="#" onclick="showHome()">HOME</a></li>
+    <li><a href="#" onclick="loadHistory()">LIFE QUESTIONS</a></li>
+    <li><a href="#" onclick="loadProfile()">PROFILE</a></li>
+    <li><a href="#" onclick="logout()">SIGN OUT</a></li>
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="start-overlay">
+    <div class="avatar-container">
+      <img src="https://system.wishplay.ca/wp-content/uploads/2025/11/avatar1.png" class="avatar-image" />
+    </div>
+    <h1 class="avatar-name">AI Afi</h1>
+
+    <select id="categorySelect">
+      <option value="Introduction">Introduction</option>
+      <option value="Wisdom">Wisdom</option>
+      <option value="Places">Places</option>
+      <option value="Early Childhood">Early Childhood</option>
+      <option value="Teen">Teen</option>
+      <option value="Post Secondary">Post Secondary</option>
+      <option value="Adulthood">Adulthood</option>
+      <option value="Present">Present</option>
+      <option value="Family">Family</option>
+    </select>
+
+    <button id="start-btn" class="start-call-btn">Start a call</button>
+  </div>
+
+  <!-- MAIN INTERFACE -->
+  <div id="main-interface" class="hidden">
+    <div class="call-info">
+      <span class="call-duration">⏱️ <span id="duration">00:00</span></span>
+      <span class="time-left">⏰ <span id="time-left">5 minutes left</span></span>
+    </div>
+
+    <div class="main-content">
+      <div class="left-column">
+        <div class="main-avatar-container">
+          <div class="avatar-ring" id="avatar-ring">
+            <img src="https://system.wishplay.ca/wp-content/uploads/2025/11/avatar1.png" class="main-avatar" />
+          </div>
+          <h2 class="main-name">AI Afi</h2>
+          <div class="status-badge" id="status-badge">Idle</div>
+        </div>
+
+        <div class="controls">
+          <button class="control-btn" id="mic-toggle">🎙️</button>
+          <button class="control-btn end-call" id="end-call">📞</button>
+        </div>
+      </div>
+
+      <div class="right-column">
+        <div class="transcript-container">
+          <h3>Conversation Transcript</h3>
+          <div id="transcript-content">
+            <p class="transcript-welcome">Conversation will appear here...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+/* ------------ FRONTEND JS LOGIC ------------ */
+
+const API_BASE = "http://127.0.0.1:8000/conversation";
+const startOverlay = document.getElementById("start-overlay");
+const mainInterface = document.getElementById("main-interface");
+const startBtn = document.getElementById("start-btn");
+const avatarRing = document.getElementById("avatar-ring");
+const statusBadge = document.getElementById("status-badge");
+const transcript = document.getElementById("transcript-content");
+const micBtn = document.getElementById("mic-toggle");
+const endBtn = document.getElementById("end-call");
+
+let currentQuestionId = null;
+let isRecording = false;
+let mediaRecorder, audioChunks = [];
+
+// START CALL
+startBtn.addEventListener("click", async () => {
+  const silent = new Audio();
+  silent.play().catch(() => {});
+  startOverlay.classList.add("hidden");
+  mainInterface.classList.remove("hidden");
+  await startConversation();
+});
+
+// START CONVERSATION
+async function startConversation() {
+  try {
+    setStatus("thinking", "Connecting...");
+    const category = document.getElementById("categorySelect").value;
+    const res = await fetch(`${API_BASE}/start?patient_id=P001&category=${encodeURIComponent(category)}`);
+    const data = await res.json();
+
+    currentQuestionId = data.question_id || "Q1";
+
+    addMessage("AI Afi", data.first_question_text, "ai");
+    playAudio(data.first_question_audio);
+
+    setStatus("talking", "Talking");
+  } catch (err) {
+    console.error(err);
+    addMessage("System", "Error: Failed to fetch", "system");
+    setStatus("idle", "Error");
+  }
+}
+
+// RECORD AUDIO
+micBtn.addEventListener("click", () => {
+  if (isRecording) stopRecording();
+  else startRecording();
+});
+
+async function startRecording() {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+
+    mediaRecorder = new MediaRecorder(stream, {
+      mimeType: "audio/webm;codecs=opus"
+    });
+
+    audioChunks = [];
+
+    mediaRecorder.ondataavailable = e => audioChunks.push(e.data);
+    mediaRecorder.onstop = sendAudio;
+
+    mediaRecorder.start();
+    isRecording = true;
+
+    micBtn.classList.add("active");
+    setStatus("listening", "Listening...");
+    addMessage("System", "🎙️ Recording started...", "system");
+
+  } catch (err) {
+    console.error("Mic access denied:", err);
+    addMessage("System", "Microphone access denied", "system");
+  }
+}
+
+function stopRecording() {
+  if (mediaRecorder && isRecording) {
+    mediaRecorder.stop();
+    isRecording = false;
+    micBtn.classList.remove("active");
+    setStatus("thinking", "Processing...");
+  }
+}
+
+// SEND AUDIO TO BACKEND
+async function sendAudio() {
+  const blob = new Blob(audioChunks, { type: "audio/webm" });
+  const file = new File([blob], "response.webm", { type: "audio/webm" });
+
+  const formData = new FormData();
+  formData.append("patient_id", "P001");
+  formData.append("question_id", currentQuestionId);
+  formData.append("category", document.getElementById("categorySelect").value);
+  formData.append("audio", file);
+
+  const response = await fetch(`${API_BASE}/reply/stream`, {
+    method: "POST",
+    body: formData,
+  });
+
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder();
+
+  let audioBuffer = [];
+
+  while (true) {
+    const { value, done } = await reader.read();
+    if (done) break;
+
+    const text = decoder.decode(value);
+    const events = text.split("\n\n");
+
+    for (let evt of events) {
+      if (!evt.trim()) continue;
+
+      const [eventLine, dataLine] = evt.split("\n");
+      const eventName = eventLine.replace("event: ", "").trim();
+      const data = JSON.parse(dataLine.replace("data: ", "").trim());
+
+      if (eventName === "user_transcript") addMessage("You", data, "user");
+      if (eventName === "filler_1_text") addMessage("AI Afi", data, "ai");
+      if (eventName === "filler_1_audio") playAudio(data);
+
+      if (eventName === "filler_2_text") addMessage("AI Afi", data, "ai");
+      if (eventName === "filler_2_audio") playAudio(data);
+
+      if (eventName === "next_question") addMessage("AI Afi", data, "ai");
+
+      if (eventName === "audio_chunk") {
+    // Chunk arrives already base64, no decoding required
+    playAudio(data);
+
+    }
+
+
+    }
+  }
+}
+
+// AUDIO PLAYER
+function playAudio(base64Audio) {
+  if (!base64Audio) {
+    console.error("Empty audio");
+    return;
+  }
+
+  try {
+    // Convert base64 → binary
+    const byteCharacters = atob(base64Audio);
+    const byteNumbers = new Array(byteCharacters.length);
+    for (let i = 0; i < byteCharacters.length; i++) {
+      byteNumbers[i] = byteCharacters.charCodeAt(i);
+    }
+    const byteArray = new Uint8Array(byteNumbers);
+
+    // Convert to MP3 blob
+    const blob = new Blob([byteArray], { type: "audio/mpeg" });
+
+    // Create play URL
+    const audioURL = URL.createObjectURL(blob);
+    const audio = new Audio(audioURL);
+
+    audio.play().catch(err => console.error("Audio play error:", err));
+
+    audio.onended = () => {
+      URL.revokeObjectURL(audioURL);
+      setStatus("idle", "Your turn");
+    };
+  } catch (e) {
+    console.error("Audio decode failed:", e);
+  }
+}
+
+
+// UI HELPERS
+function addMessage(speaker, text, type) {
+  const msg = document.createElement("div");
+  msg.className = `transcript-message ${type}`;
+  msg.innerHTML = `<div class="speaker">${speaker}</div><div class="text">${text}</div>`;
+  transcript.appendChild(msg);
+  transcript.scrollTop = transcript.scrollHeight;
+}
+
+function setStatus(state, text) {
+  statusBadge.textContent = text;
+  avatarRing.className = "avatar-ring";
+  if (state === "talking") avatarRing.classList.add("talking");
+}
+
+endBtn.addEventListener("click", () => location.reload());
+
+/* ---------- MODAL CONTROLLER ---------- */
+
+function openModal(html) {
+  const modal = document.getElementById("modal-overlay");
+  const body = document.getElementById("modal-body");
+  body.innerHTML = html;
+  modal.classList.remove("hidden");
+}
+
+function closeModal() {
+  document.getElementById("modal-overlay").classList.add("hidden");
+}
+
+/* ---------- API ENDPOINTS ---------- */
+const PHP_API = "http://localhost/wishplay/backend";
+
+/* ---------- LOAD LOGIN MODAL ---------- */
+function showHome() {
+  // Home = hide modal, show the AI interface again
+  closeModal();
+  startOverlay.classList.remove("hidden");
+  mainInterface.classList.add("hidden");
+}
+
+/* ---------- LOAD PROFILE ---------- */
+async function loadProfile() {
+  const res = await fetch(`${PHP_API}/api_profile_get.php`);
+  const data = await res.json();
+
+  openModal(`
+    <h2>Your Profile</h2>
+    <div class="modal-body">
+      <input type="text" id="profile-name" value="${data.name}" placeholder="Name" />
+      <input type="email" disabled value="${data.email}" />
+      <input type="password" id="profile-pass" placeholder="New Password (optional)" />
+      <button onclick="saveProfile()">Save</button>
+    </div>
+  `);
+}
+
+async function saveProfile() {
+  const name = document.getElementById("profile-name").value;
+  const password = document.getElementById("profile-pass").value;
+
+  await fetch(`${PHP_API}/api_profile_update.php`, {
+    method: "POST",
+    body: new URLSearchParams({ name, password })
+  });
+
+  closeModal();
+}
+
+/* ---------- LOAD HISTORY ---------- */
+async function loadHistory() {
+  const res = await fetch(`${PHP_API}/api_history_get.php`);
+  const history = await res.json();
+
+  let html = `<h2>Life Questions</h2>`;
+  html += `<div class="modal-body">`;
+
+  if (history.length === 0) {
+    html += `<p>No past answers yet.</p>`;
+  } else {
+    history.forEach(h => {
+      html += `
+        <div style="border-bottom:1px solid #ddd;padding:10px 0;margin:10px 0;">
+          <p><b>Category:</b> ${h.category}</p>
+          <p><b>Question:</b> ${h.question}</p>
+          <p><b>Answer:</b> ${h.answer_text}</p>
+        </div>
+      `;
+    });
+  }
+
+  html += `</div>`;
+
+  openModal(html);
+}
+
+/* ---------- LOGOUT ---------- */
+async function logout() {
+  await fetch(`${PHP_API}/api_logout.php`);
+  location.reload();
+}
+
+
+</script>
+
+<!-- UNIVERSAL MODAL OVERLAY -->
+<div id="modal-overlay" class="modal hidden">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div id="modal-body">
+      <!-- Dynamic content goes here -->
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Modal Base Styling */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5000;
+  }
+
+  .modal.hidden { display: none !important; }
+
+  .modal-content {
+    background: #fff;
+    width: 480px;
+    max-width: 90%;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    animation: fadeIn 0.25s ease-out;
+  }
+
+  .modal-close {
+    float: right;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+    margin-top: -10px;
+    margin-right: -10px;
+  }
+
+  #modal-body h2 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .modal-body input, .modal-body button {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+
+  .modal-body button {
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px);}
+    to   { opacity: 1; transform: translateY(0);}
+  }
+</style>
+
+</body>
+</html>

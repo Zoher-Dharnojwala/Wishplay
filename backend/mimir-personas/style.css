@@ -1,0 +1,55 @@
+.persona-card {
+  background: var(--card);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+  border: none;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: linear-gradient(135deg, var(--brand), var(--accent));
+  color: white;
+}
+
+.photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid white;
+  object-fit: cover;
+}
+
+.id h2 {
+  margin: 4px 0;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.id .role {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #E0F2FE;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+blockquote {
+  margin: 20px;
+  padding: 15px;
+  background: #F9FAFB;
+  border-left: 5px solid var(--accent);
+  font-style: italic;
+  border-radius: 8px;
+  color: var(--ink);
+}

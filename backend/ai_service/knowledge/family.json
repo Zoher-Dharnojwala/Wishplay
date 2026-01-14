@@ -1,0 +1,942 @@
+[
+  {
+    "id": "F1",
+    "priority": 42,
+    "topic_flag": "current_partner_intro",
+    "emotion_tags": ["warm", "empathetic"],
+    "prompt_variants": [
+      "Would you like to tell me a bit about your partner?",
+      "How did you and your partner first meet?",
+      "What is something you really appreciate about your partner?",
+      "What kind of bond would you say you share with your partner?",
+      "If you had to describe your relationship in a few words, what would they be?"
+    ],
+    "followups": [
+      "That’s so lovely — you speak with real warmth.",
+      "It sounds like your relationship has a lot of depth and care.",
+      "That connection clearly means a lot to you."
+    ]
+  },
+  {
+    "id": "F2",
+    "priority": 43,
+    "topic_flag": "partner_shared_moments",
+    "emotion_tags": ["nostalgic", "gentle"],
+    "prompt_variants": [
+      "What’s one of your favorite memories together?",
+      "Is there a moment with your partner that always makes you smile when you think of it?",
+      "What are some experiences you’ve shared that really stand out to you?",
+      "Do you remember a time when you both laughed uncontrollably or felt completely at peace together?",
+      "What moments with your partner do you cherish most?"
+    ],
+    "followups": [
+      "That sounds like such a special memory.",
+      "It’s amazing how shared moments like that stay with us.",
+      "You can really hear the affection in how you remember it."
+    ]
+  },
+  {
+    "id": "F3",
+    "priority": 44,
+    "topic_flag": "partner_growth",
+    "emotion_tags": ["thoughtful", "encouraging"],
+    "prompt_variants": [
+      "How has your relationship evolved over time?",
+      "What have you and your partner taught each other through the years?",
+      "Have there been changes or challenges that helped your relationship grow stronger?",
+      "What do you feel you’ve both learned from each other?",
+      "How has your relationship shaped who you are today?"
+    ],
+    "followups": [
+      "That shows a lot of growth and maturity in your bond.",
+      "Relationships often teach us some of life’s deepest lessons.",
+      "It’s beautiful how you recognize the ways you’ve grown together."
+    ]
+  },
+  {
+    "id": "F4",
+    "priority": 45,
+    "topic_flag": "partner_challenges",
+    "emotion_tags": ["empathetic", "supportive"],
+    "prompt_variants": [
+      "Every relationship has its ups and downs — what challenges have you and your partner faced?",
+      "Was there ever a moment that really tested your connection?",
+      "How do you both handle disagreements or tough times?",
+      "What has helped you overcome obstacles together?",
+      "Do you feel your relationship has become stronger through challenges?"
+    ],
+    "followups": [
+      "That sounds like it took a lot of understanding and patience.",
+      "It’s clear that you’ve both worked through challenges with care.",
+      "Sometimes it’s those tough moments that make a partnership even deeper."
+    ]
+  },
+  {
+    "id": "F5",
+    "priority": 46,
+    "topic_flag": "partner_reflection",
+    "emotion_tags": ["reflective", "grateful"],
+    "prompt_variants": [
+      "What does your partner mean to you in this stage of life?",
+      "If you could describe what makes your relationship special, what would it be?",
+      "What do you value most about the person you share your life with?",
+      "How would you say your partner has impacted your journey through life?",
+      "When you think of your partner, what feelings come up for you most?"
+    ],
+    "followups": [
+      "That’s such a heartfelt reflection.",
+      "It’s touching to hear the love and respect in your words.",
+      "That really captures the essence of your relationship."
+    ]
+  },
+  {
+    "id": "F6",
+    "priority": 47,
+    "topic_flag": "past_partners_intro",
+    "emotion_tags": ["gentle", "respectful"],
+    "prompt_variants": [
+      "Would you be comfortable sharing a little about any past relationships that were meaningful to you?",
+      "Have there been relationships in your past that shaped the person you are today?",
+      "If you’d like, could you tell me about someone from your past who had a big impact on your life?",
+      "Are there any past partnerships or friendships that still hold meaning for you?",
+      "Would you like to reflect on a relationship from the past that taught you something important?"
+    ],
+    "followups": [
+      "Thank you for sharing that — I can hear how much it meant to you.",
+      "That sounds like a relationship that left a real impression on you.",
+      "I appreciate how openly you shared that memory."
+    ]
+  },
+  {
+    "id": "F7",
+    "priority": 48,
+    "topic_flag": "past_partner_memories",
+    "emotion_tags": ["nostalgic", "tender"],
+    "prompt_variants": [
+      "What’s a memory from a past relationship that still makes you smile?",
+      "Is there a moment from a past partnership that you look back on fondly?",
+      "When you think of your past relationships, what moments stand out as meaningful or kind?",
+      "Was there a particular time when you felt especially connected to someone in your past?",
+      "Do you remember any lessons or laughter you shared with someone from earlier in life?"
+    ],
+    "followups": [
+      "That’s a lovely memory to carry with you.",
+      "It sounds like that experience still brings warmth to your heart.",
+      "Those kinds of memories stay with us in the best way."
+    ]
+  },
+  {
+    "id": "F8",
+    "priority": 49,
+    "topic_flag": "past_partner_reflections",
+    "emotion_tags": ["introspective", "calm"],
+    "prompt_variants": [
+      "Looking back, what do you feel you learned from your past relationships?",
+      "Did any of your earlier relationships teach you something about love, trust, or yourself?",
+      "When you reflect on past partnerships, what insights stand out to you most?",
+      "Were there lessons from the past that helped you grow emotionally or personally?",
+      "How do you think those past experiences shaped how you connect with people today?"
+    ],
+    "followups": [
+      "That’s a wise perspective — it sounds like you’ve learned a lot through those experiences.",
+      "It’s wonderful that you can see growth in what you’ve been through.",
+      "Those reflections show real emotional understanding."
+    ]
+  },
+  {
+    "id": "F9",
+    "priority": 50,
+    "topic_flag": "closure_and_peace",
+    "emotion_tags": ["reassuring", "peaceful"],
+    "prompt_variants": [
+      "Do you feel at peace with your past relationships now?",
+      "Have you found closure or understanding about how things unfolded in your past?",
+      "Is there anything from those relationships that you’ve been able to let go of or make peace with?",
+      "Would you say your past relationships still hold emotional weight for you?",
+      "How do you feel when you think back on those earlier connections today?"
+    ],
+    "followups": [
+      "That’s a really grounded way to view your past.",
+      "It sounds like you’ve come to a place of acceptance and balance.",
+      "Finding peace with our past often opens space for new calm and gratitude."
+    ]
+  },
+  {
+    "id": "F10",
+    "priority": 51,
+    "topic_flag": "past_partners_gratitude",
+    "emotion_tags": ["grateful", "reflective"],
+    "prompt_variants": [
+      "When you look back, is there anything you’re thankful for from your past relationships?",
+      "Are there qualities or experiences from your past partners that you still value today?",
+      "Do you ever find yourself grateful for something a past relationship taught you?",
+      "What do you feel those people added to your life story?",
+      "If you could, what would you thank your past partners for?"
+    ],
+    "followups": [
+      "That’s a beautiful way to express gratitude for what was.",
+      "It’s touching to see how you hold appreciation for those chapters.",
+      "You’ve found meaning in places where many only see endings — that’s powerful."
+    ]
+  },
+  {
+    "id": "F11",
+    "priority": 52,
+    "topic_flag": "children_intro",
+    "emotion_tags": ["warm", "inviting"],
+    "prompt_variants": [
+      "Do you have children, or any young people who have been an important part of your life?",
+      "Would you like to tell me a little about your children or those you’ve cared for?",
+      "If you’re a parent, what’s one word you’d use to describe that experience?",
+      "Who in your life has made you feel a sense of guidance or nurturing?",
+      "Would you like to share a memory or story involving your children or family?"
+    ],
+    "followups": [
+      "That’s wonderful — it sounds like they’ve been a big part of your story.",
+      "You speak about them with so much warmth.",
+      "It’s beautiful to hear how that connection has shaped you."
+    ]
+  },
+
+    {
+      "id": "F12",
+      "priority": 53,
+      "topic_flag": "children_memories",
+      "emotion_tags": ["nostalgic", "gentle"],
+      "prompt_variants": [
+        "What’s one of your favorite memories with your child or children?",
+        "Is there a moment from their childhood that you still cherish deeply?",
+        "When you think of your children, what moments come to mind first?",
+        "Can you share a story that always makes you smile when you think of your kids?",
+        "Was there a time you felt especially proud or joyful as a parent?"
+      ],
+      "followups": [
+        "That sounds like such a treasured memory.",
+        "You can really feel the love in that story.",
+        "It’s heartwarming to hear how clearly you remember that moment."
+      ]
+    },
+
+    {
+      "id": "F13",
+      "priority": 54,
+      "topic_flag": "children_growth_reflection",
+      "emotion_tags": ["reflective", "proud"],
+      "prompt_variants": [
+        "How have you seen your children grow and change over the years?",
+        "What are some qualities in your children that make you proud?",
+        "When you look at who your children have become, what stands out most to you?",
+        "How do you feel seeing the paths your children have taken in life?",
+        "Is there something your children have taught you that surprised you?"
+      ],
+      "followups": [
+        "That’s so special — you must be very proud.",
+        "It’s wonderful to hear how much admiration you have for them.",
+        "You’ve clearly raised or influenced them with a lot of love and care."
+      ]
+    },
+
+    {
+      "id": "F14",
+      "priority": 55,
+      "topic_flag": "children_lessons_and_challenges",
+      "emotion_tags": ["empathetic", "honest"],
+      "prompt_variants": [
+        "Parenting can have its ups and downs — what were some of the challenges you faced?",
+        "Were there times when raising your children felt especially difficult or emotional?",
+        "What lessons do you think being a parent taught you?",
+        "Is there something you learned from your children that changed how you see life?",
+        "How did you balance your own needs while being there for your kids?"
+      ],
+      "followups": [
+        "That sounds like it took a lot of strength and understanding.",
+        "Parenting really is a lifelong learning journey.",
+        "You’ve clearly given so much of yourself — that says a lot about your love and resilience."
+      ]
+    },
+
+    {
+      "id": "F15",
+      "priority": 56,
+      "topic_flag": "children_present_connection",
+      "emotion_tags": ["peaceful", "loving"],
+      "prompt_variants": [
+        "What is your relationship with your children like today?",
+        "How do you stay connected with them now?",
+        "What kind of bond do you share with your children as adults?",
+        "What brings you joy in your connection with them these days?",
+        "How does it feel to see your children building their own lives?"
+      ],
+      "followups": [
+        "That’s such a heartfelt way to describe your connection.",
+        "It’s wonderful to hear the love and balance you share now.",
+        "Your relationship sounds full of care and mutual respect."
+      ]
+    },
+
+    {
+      "id": "F16",
+      "priority": 57,
+      "topic_flag": "parenting_role",
+      "emotion_tags": ["warm", "thoughtful"],
+      "prompt_variants": [
+        "What has being a parent or caregiver meant to you personally?",
+        "How would you describe your approach to parenting or nurturing others?",
+        "What values did you try to pass on to your children or loved ones?",
+        "When you think of your role as a parent, what feelings come up for you?",
+        "What do you think has been the most rewarding part of being a parent or mentor?"
+      ],
+      "followups": [
+        "That’s a beautiful reflection on what parenting has meant for you.",
+        "You clearly put a lot of heart into your role as a guide and nurturer.",
+        "It’s wonderful to hear how deeply you’ve cared for those around you."
+      ]
+    },
+
+    {
+      "id": "F17",
+      "priority": 58,
+      "topic_flag": "parenting_challenges",
+      "emotion_tags": ["empathetic", "understanding"],
+      "prompt_variants": [
+        "What have been some of the most challenging parts of being a parent?",
+        "Were there moments when you doubted yourself or had to make tough choices?",
+        "How did you handle times when things didn’t go as planned with your children?",
+        "What helped you stay patient or strong during difficult parenting moments?",
+        "Did you ever learn something about yourself through those challenges?"
+      ],
+      "followups": [
+        "That sounds like it took a lot of patience and inner strength.",
+        "You navigated some very real challenges with care and resilience.",
+        "Your honesty about the tough parts makes your story even more powerful."
+      ]
+    },
+
+    {
+      "id": "F18",
+      "priority": 59,
+      "topic_flag": "parenting_values",
+      "emotion_tags": ["reflective", "peaceful"],
+      "prompt_variants": [
+        "What principles guided you most as a parent?",
+        "Was there a particular value or life lesson you always tried to teach your children?",
+        "If you had to choose one thing you hoped your children would remember from you, what would it be?",
+        "How did your own upbringing influence how you chose to parent?",
+        "What beliefs shaped the way you guided your family?"
+      ],
+      "followups": [
+        "Those are such meaningful values to have shared.",
+        "It’s beautiful how intentional you were in your approach to parenting.",
+        "That shows the heart and wisdom behind everything you did as a parent."
+      ]
+    },
+
+    {
+      "id": "F19",
+      "priority": 60,
+      "topic_flag": "parenting_reflection",
+      "emotion_tags": ["grateful", "calm"],
+      "prompt_variants": [
+        "Looking back, what are you most proud of as a parent?",
+        "If you could give your younger self one piece of advice about parenting, what would it be?",
+        "Do you feel you became the kind of parent you hoped to be?",
+        "What moments remind you that you did your best as a parent?",
+        "What has parenting taught you about love and patience?"
+      ],
+      "followups": [
+        "That’s a truly grounded reflection — full of wisdom and love.",
+        "It sounds like you’ve given a lot of yourself, and it shows in your words.",
+        "Your reflections really highlight the depth of your experience as a parent."
+      ]
+    },
+
+    {
+      "id": "F20",
+      "priority": 61,
+      "topic_flag": "parenting_legacy",
+      "emotion_tags": ["peaceful", "inspiring"],
+      "prompt_variants": [
+        "What lessons or values would you hope your children carry forward?",
+        "If your children could describe what they learned from you, what do you hope they’d say?",
+        "What kind of legacy do you hope your parenting has left behind?",
+        "How do you hope to be remembered by your children?",
+        "What message would you want to leave for them, if they were listening now?"
+      ],
+      "followups": [
+        "That’s such a heartfelt legacy to leave behind.",
+        "It’s moving to hear how much thought and love you’ve put into that message.",
+        "Those words carry so much warmth and wisdom — a true reflection of who you are."
+      ]
+    },
+
+    {
+      "id": "F21",
+      "priority": 62,
+      "topic_flag": "family_meaning",
+      "emotion_tags": ["warm", "reflective"],
+      "prompt_variants": [
+        "When you think of the word ‘family,’ what does it mean to you?",
+        "How would you describe your family in a few words?",
+        "What makes a group of people feel like family to you?",
+        "What role has family played in shaping who you are?",
+        "If someone asked what family means in your life, what would you say?"
+      ],
+      "followups": [
+        "That’s such a meaningful way to describe family.",
+        "It’s wonderful to hear how you define connection and belonging.",
+        "Your view of family really shows the love and values you hold inside."
+      ]
+    },
+
+    {
+      "id": "F22",
+      "priority": 63,
+      "topic_flag": "family_bonds",
+      "emotion_tags": ["gentle", "affectionate"],
+      "prompt_variants": [
+        "Who in your family have you felt closest to over the years?",
+        "Is there a particular family member you’ve always shared a special bond with?",
+        "Who in your family has had the biggest influence on your life?",
+        "Which relationships in your family bring you the most comfort or joy?",
+        "Has there been someone in your family you’ve always looked up to?"
+      ],
+      "followups": [
+        "That sounds like a truly special bond.",
+        "You speak about them with so much affection.",
+        "It’s clear that person means a lot to you."
+      ]
+    },
+
+    {
+      "id": "F23",
+      "priority": 64,
+      "topic_flag": "family_traditions",
+      "emotion_tags": ["nostalgic", "joyful"],
+      "prompt_variants": [
+        "Does your family have any traditions that are especially meaningful to you?",
+        "Are there certain family gatherings or rituals you always looked forward to?",
+        "What family traditions have stayed with you over the years?",
+        "Was there something unique your family used to do that brought everyone together?",
+        "Do you still carry forward any family customs from your childhood?"
+      ],
+      "followups": [
+        "That sounds like such a joyful tradition.",
+        "Those memories seem full of warmth and connection.",
+        "It’s beautiful how traditions can carry meaning across time."
+      ]
+    },
+
+    {
+      "id": "F24",
+      "priority": 65,
+      "topic_flag": "family_support",
+      "emotion_tags": ["supportive", "calm"],
+      "prompt_variants": [
+        "Who in your family has been a source of support during tough times?",
+        "When life felt difficult, who in your family did you turn to?",
+        "Is there someone in your family who always seemed to understand you?",
+        "What kind of support has your family offered you over the years?",
+        "Have there been times when your family surprised you with their care or kindness?"
+      ],
+      "followups": [
+        "That’s a touching example of how family can really show up for each other.",
+        "It’s heartwarming to hear that kind of support in your story.",
+        "You clearly have experienced some meaningful care within your family circle."
+      ]
+    },
+
+    {
+      "id": "F25",
+      "priority": 66,
+      "topic_flag": "family_reflections",
+      "emotion_tags": ["peaceful", "grateful"],
+      "prompt_variants": [
+        "Looking back, what do you appreciate most about your family?",
+        "Is there something your family taught you that still guides you today?",
+        "If you could describe your family’s spirit or personality, how would you describe it?",
+        "What do you think makes your family unique?",
+        "What feelings come up for you when you reflect on your family as a whole?"
+      ],
+      "followups": [
+        "That’s a really heartfelt reflection on your family.",
+        "It’s lovely how you hold appreciation for what your family represents.",
+        "Your reflections show such gratitude and understanding of your roots."
+      ]
+    },
+
+    {
+      "id": "F26",
+      "priority": 67,
+      "topic_flag": "mother_intro",
+      "emotion_tags": ["warm", "gentle"],
+      "prompt_variants": [
+        "Can you tell me a little about your mother or a mother figure in your life?",
+        "Who would you say played the role of a mother to you while growing up?",
+        "What comes to mind when you think about your mother or someone who cared for you like one?",
+        "Would you like to share a memory that captures your mother’s spirit?",
+        "How would you describe your relationship with your mother?"
+      ],
+      "followups": [
+        "That’s a heartfelt description — it really gives a sense of who she was.",
+        "You speak with such warmth and tenderness.",
+        "It’s touching to hear how you remember her presence in your life."
+      ]
+    },
+
+    {
+      "id": "F27",
+      "priority": 68,
+      "topic_flag": "mother_influence",
+      "emotion_tags": ["reflective", "loving"],
+      "prompt_variants": [
+        "In what ways do you think your mother influenced the person you became?",
+        "What are some values or lessons your mother taught you that still stay with you?",
+        "Is there something about your mother that you see in yourself today?",
+        "How did your mother shape your understanding of love or strength?",
+        "What do you think was your mother’s greatest gift to you?"
+      ],
+      "followups": [
+        "That’s such a meaningful influence to carry forward.",
+        "It’s beautiful how her lessons continue to live within you.",
+        "You speak about her with a deep sense of gratitude and respect."
+      ]
+    },
+
+    {
+      "id": "F28",
+      "priority": 69,
+      "topic_flag": "mother_memories",
+      "emotion_tags": ["nostalgic", "soft"],
+      "prompt_variants": [
+        "What’s one of your favorite memories with your mother?",
+        "When you think of her, what moments come to your mind first?",
+        "Was there a small habit or gesture your mother had that you still remember fondly?",
+        "Can you describe a time when you felt especially close to your mother?",
+        "What little things remind you of her today?"
+      ],
+      "followups": [
+        "That’s such a vivid memory — it really paints a picture.",
+        "It’s amazing how certain moments stay with us forever.",
+        "Your words bring that memory to life beautifully."
+      ]
+    },
+
+    {
+      "id": "F29",
+      "priority": 70,
+      "topic_flag": "mother_challenges",
+      "emotion_tags": ["empathetic", "understanding"],
+      "prompt_variants": [
+        "Were there any difficult times or misunderstandings between you and your mother?",
+        "How did you navigate moments of tension or distance with her, if there were any?",
+        "Did your relationship with your mother change as you grew older?",
+        "Was there something you wish you had said or understood earlier about her?",
+        "Looking back, how do you make sense of the harder parts of your relationship with her?"
+      ],
+      "followups": [
+        "That sounds like it took a lot of reflection and strength to process.",
+        "It’s clear you’ve thought deeply about that part of your story.",
+        "Your honesty adds a lot of depth to how you describe your bond with her."
+      ]
+    },
+
+    {
+      "id": "F30",
+      "priority": 71,
+      "topic_flag": "mother_reflection",
+      "emotion_tags": ["peaceful", "grateful"],
+      "prompt_variants": [
+        "What do you appreciate most about your mother today?",
+        "If she were here with us, what would you want to say to her?",
+        "What would you want others to know about the kind of person she was?",
+        "How do you carry her presence with you in your life now?",
+        "What do you think she’d be proud of if she could see you today?"
+      ],
+      "followups": [
+        "That’s such a beautiful way to honor her memory.",
+        "It’s touching to hear how she continues to be part of your life.",
+        "Your words carry so much love — it’s truly heartfelt."
+      ]
+    },
+
+    {
+      "id": "F31",
+      "priority": 72,
+      "topic_flag": "father_intro",
+      "emotion_tags": ["gentle", "curious"],
+      "prompt_variants": [
+        "Can you tell me a little about your father or a father figure in your life?",
+        "Who played a fatherly or guiding role for you growing up?",
+        "What comes to mind when you think about your father?",
+        "Would you like to share a memory that best captures who your father was?",
+        "How would you describe your relationship with your father?"
+      ],
+      "followups": [
+        "That’s a really heartfelt way to describe him.",
+        "You speak about him with such clarity and emotion.",
+        "It’s lovely to hear how he influenced your story."
+      ]
+    },
+
+    {
+      "id": "F32",
+      "priority": 73,
+      "topic_flag": "father_influence",
+      "emotion_tags": ["reflective", "respectful"],
+      "prompt_variants": [
+        "In what ways did your father shape the person you became?",
+        "What lessons or values did your father pass on to you?",
+        "Was there something about your father’s way of living that you admired?",
+        "How do you think your father influenced your outlook on life?",
+        "What do you think you carry forward from him, consciously or not?"
+      ],
+      "followups": [
+        "That’s such a meaningful reflection on his influence.",
+        "You’ve described a powerful connection between who he was and who you are.",
+        "It’s beautiful how those lessons still live within you."
+      ]
+    },
+
+    {
+      "id": "F33",
+      "priority": 74,
+      "topic_flag": "father_memories",
+      "emotion_tags": ["nostalgic", "tender"],
+      "prompt_variants": [
+        "What’s a memory with your father that you cherish most?",
+        "Is there a moment with your father that always makes you smile?",
+        "What did you enjoy doing together when you were younger?",
+        "Is there something small about him that always stays with you?",
+        "What feeling do you get when you think about those moments with him?"
+      ],
+      "followups": [
+        "That’s such a heartwarming memory.",
+        "It sounds like that time together meant a lot to you.",
+        "Those moments really bring out the love and connection you shared."
+      ]
+    },
+
+    {
+      "id": "F34",
+      "priority": 75,
+      "topic_flag": "father_challenges",
+      "emotion_tags": ["empathetic", "understanding"],
+      "prompt_variants": [
+        "Were there any difficult moments between you and your father?",
+        "Did your relationship with your father evolve over time?",
+        "Was there ever something you wished he understood better about you?",
+        "How did you make peace with any differences or distance that existed?",
+        "What helped you come to terms with any challenges in that relationship?"
+      ],
+      "followups": [
+        "That shows a lot of reflection and emotional maturity.",
+        "It’s beautiful that you can see the lessons in those experiences.",
+        "Your openness about this adds real depth to your story."
+      ]
+    },
+
+    {
+      "id": "F35",
+      "priority": 76,
+      "topic_flag": "father_reflection",
+      "emotion_tags": ["peaceful", "grateful"],
+      "prompt_variants": [
+        "Looking back, what do you appreciate most about your father?",
+        "If he were here now, what would you want to say to him?",
+        "What kind of legacy did your father leave behind in your life?",
+        "How do you think he’d describe the person you’ve become?",
+        "What lesson from him do you still carry close to your heart?"
+      ],
+      "followups": [
+        "That’s a beautiful reflection full of gratitude and understanding.",
+        "You’ve captured his presence and impact so clearly in your words.",
+        "It’s moving to hear how deeply his lessons continue to live through you."
+      ]
+    },
+
+    {
+      "id": "F36",
+      "priority": 77,
+      "topic_flag": "siblings_intro",
+      "emotion_tags": ["warm", "inviting"],
+      "prompt_variants": [
+        "Do you have any brothers or sisters?",
+        "Can you tell me a little about your siblings or people you grew up with?",
+        "Who did you spend most of your childhood days with?",
+        "Would you like to share what your sibling relationships have been like?",
+        "What kind of bond did you share with your siblings growing up?"
+      ],
+      "followups": [
+        "That’s a lovely way to describe your family dynamic.",
+        "You speak about them with such warmth.",
+        "It sounds like those relationships shaped many of your early experiences."
+      ]
+    },
+
+    {
+      "id": "F37",
+      "priority": 78,
+      "topic_flag": "siblings_memories",
+      "emotion_tags": ["nostalgic", "joyful"],
+      "prompt_variants": [
+        "What are some of your favorite memories with your siblings?",
+        "Was there something you loved doing together as kids?",
+        "Do you remember moments of laughter or mischief with your brothers or sisters?",
+        "What was life like in your household growing up with them?",
+        "Are there stories from your childhood with your siblings that still make you smile?"
+      ],
+      "followups": [
+        "That sounds like such a fun and lively memory.",
+        "You can really feel the closeness in those moments.",
+        "It’s beautiful how those early experiences stay vivid after all these years."
+      ]
+    },
+
+    {
+      "id": "F38",
+      "priority": 79,
+      "topic_flag": "siblings_relationships",
+      "emotion_tags": ["gentle", "reflective"],
+      "prompt_variants": [
+        "How has your relationship with your siblings changed over the years?",
+        "Would you say you’ve grown closer or more distant as time passed?",
+        "What has helped you stay connected with your siblings through the years?",
+        "Have you learned new things about each other as adults?",
+        "How do your siblings fit into your life today?"
+      ],
+      "followups": [
+        "That’s such a natural evolution — relationships often grow and change like that.",
+        "It’s wonderful that you still maintain that sense of connection.",
+        "It sounds like there’s a deep understanding between you, even as life shifts."
+      ]
+    },
+
+    {
+      "id": "F39",
+      "priority": 80,
+      "topic_flag": "siblings_challenges",
+      "emotion_tags": ["empathetic", "calm"],
+      "prompt_variants": [
+        "Were there ever challenges or rivalries between you and your siblings?",
+        "How did you handle disagreements or differences growing up?",
+        "Did your sibling relationships ever test your patience or teach you something about yourself?",
+        "Were there moments when you felt misunderstood by your siblings?",
+        "How did those challenges shape your relationship in the long run?"
+      ],
+      "followups": [
+        "That’s such an honest and thoughtful reflection.",
+        "It’s beautiful that you can see the lessons in those experiences.",
+        "Your openness adds real depth to your family story."
+      ]
+    },
+
+    {
+      "id": "F40",
+      "priority": 81,
+      "topic_flag": "siblings_reflection",
+      "emotion_tags": ["peaceful", "grateful"],
+      "prompt_variants": [
+        "What do you appreciate most about your siblings today?",
+        "If you could describe your siblings in a few words, what would you say?",
+        "Is there something you’ve learned from them that still guides you?",
+        "What role do they play in your life now?",
+        "When you think of your siblings, what feeling comes to mind first?"
+      ],
+      "followups": [
+        "That’s such a heartfelt reflection on your family bond.",
+        "It’s lovely how you hold them in such appreciation.",
+        "You speak about them with real affection — it’s beautiful to hear."
+      ]
+    },
+
+    {
+      "id": "F41",
+      "priority": 82,
+      "topic_flag": "grandparents_intro",
+      "emotion_tags": ["warm", "nostalgic"],
+      "prompt_variants": [
+        "Did you grow up knowing your grandparents or other elder figures?",
+        "Can you tell me a bit about your grandparents and the role they played in your life?",
+        "Who were the elders or family figures that you felt closest to as a child?",
+        "Do you remember spending time with your grandparents growing up?",
+        "What comes to mind when you think about your grandparents or ancestors?"
+      ],
+      "followups": [
+        "That’s such a heartfelt recollection.",
+        "You speak about them with real warmth and respect.",
+        "It’s lovely how you hold their presence in your memories."
+      ]
+    },
+
+    {
+      "id": "F42",
+      "priority": 83,
+      "topic_flag": "grandparents_stories",
+      "emotion_tags": ["curious", "respectful"],
+      "prompt_variants": [
+        "Did your grandparents ever share stories about their own lives?",
+        "What kind of stories or wisdom did your grandparents pass down to you?",
+        "Do you remember any sayings or lessons your grandparents used to repeat?",
+        "Were there traditions or rituals your grandparents valued deeply?",
+        "What did your grandparents teach you about life or family?"
+      ],
+      "followups": [
+        "Those stories sound full of history and heart.",
+        "It’s beautiful how they passed down their wisdom to you.",
+        "Hearing about their traditions gives such a sense of continuity."
+      ]
+    },
+
+    {
+      "id": "F43",
+      "priority": 84,
+      "topic_flag": "grandparents_memories",
+      "emotion_tags": ["soft", "affectionate"],
+      "prompt_variants": [
+        "What’s one of your favorite memories with your grandparents?",
+        "Can you describe a moment that truly captures your relationship with them?",
+        "What did you love doing together when you were younger?",
+        "Was there something small about your grandparents that always made you smile?",
+        "What sounds, smells, or places remind you of them today?"
+      ],
+      "followups": [
+        "That’s such a sweet and vivid memory.",
+        "You bring that moment to life beautifully.",
+        "It’s touching how clearly those experiences stay with you."
+      ]
+    },
+
+    {
+      "id": "F44",
+      "priority": 85,
+      "topic_flag": "grandparents_influence",
+      "emotion_tags": ["reflective", "grateful"],
+      "prompt_variants": [
+        "How do you think your grandparents influenced the person you became?",
+        "What values or perspectives did they instill in you?",
+        "Did they shape how you see family, kindness, or resilience?",
+        "What part of you feels most connected to their legacy?",
+        "How do you see your grandparents’ influence show up in your life today?"
+      ],
+      "followups": [
+        "That’s such a deep reflection on their lasting influence.",
+        "It’s beautiful how you’ve carried their legacy forward.",
+        "You speak with so much appreciation for what they passed on to you."
+      ]
+    },
+
+    {
+      "id": "F45",
+      "priority": 86,
+      "topic_flag": "grandparents_reflection",
+      "emotion_tags": ["peaceful", "reverent"],
+      "prompt_variants": [
+        "If your grandparents could see you today, what do you think they’d say?",
+        "What do you most appreciate about having them in your life?",
+        "Is there something you wish you could tell them now?",
+        "How do you honor their memory or legacy in your life today?",
+        "What part of them do you still feel close to?"
+      ],
+      "followups": [
+        "That’s such a heartfelt way to keep their memory alive.",
+        "It’s moving how much presence they still have in your story.",
+        "Your reflection carries both love and peace — it’s beautiful to hear."
+      ]
+    },
+
+    {
+      "id": "F46",
+      "priority": 87,
+      "topic_flag": "pets_intro",
+      "emotion_tags": ["warm", "inviting"],
+      "prompt_variants": [
+        "Do you have or have you ever had any pets?",
+        "Are there any animals that have been part of your life or family?",
+        "Have you ever had a special connection with a pet or an animal?",
+        "Would you like to tell me about any pets you’ve loved?",
+        "Have animals played a role in your life in any way?"
+      ],
+      "followups": [
+        "That’s wonderful — pets really do become part of the family.",
+        "You can tell there’s a deep affection there.",
+        "It’s beautiful how animals bring warmth and companionship into our lives."
+      ]
+    },
+
+    {
+      "id": "F47",
+      "priority": 88,
+      "topic_flag": "pets_bond",
+      "emotion_tags": ["affectionate", "peaceful"],
+      "prompt_variants": [
+        "What made your bond with your pet special?",
+        "Can you describe what your pet meant to you?",
+        "How would you describe the kind of connection you shared?",
+        "What do you remember most about your pet’s personality?",
+        "What made that relationship unique compared to others in your life?"
+      ],
+      "followups": [
+        "That sounds like such a pure and loving connection.",
+        "You describe them with such warmth — it’s really touching.",
+        "It’s amazing how animals can understand and comfort us without words."
+      ]
+    },
+
+    {
+      "id": "F48",
+      "priority": 89,
+      "topic_flag": "pets_memories",
+      "emotion_tags": ["nostalgic", "tender"],
+      "prompt_variants": [
+        "What’s one of your favorite memories with your pet?",
+        "Is there a funny or sweet story about your pet that you still remember?",
+        "What moment with your pet always brings a smile to your face?",
+        "How did your pet usually show affection toward you?",
+        "Do you have a favorite routine or memory you shared together?"
+      ],
+      "followups": [
+        "That’s such a lovely story — it really brings the moment to life.",
+        "You can feel the joy in the way you remember them.",
+        "Those memories stay with us forever — thank you for sharing that."
+      ]
+    },
+
+    {
+      "id": "F49",
+      "priority": 90,
+      "topic_flag": "pets_loss_reflection",
+      "emotion_tags": ["gentle", "empathetic"],
+      "prompt_variants": [
+        "Have you ever had to say goodbye to a pet you loved?",
+        "How did you cope with the loss of your pet?",
+        "What helped you through that time after losing them?",
+        "Do you still feel their presence in some way?",
+        "Was there something comforting you held onto after they were gone?"
+      ],
+      "followups": [
+        "That’s such a tender reflection — thank you for sharing something so personal.",
+        "It’s beautiful how that love continues even beyond their time here.",
+        "The way you remember them shows how deep that bond truly was."
+      ]
+    },
+
+    {
+      "id": "F50",
+      "priority": 91,
+      "topic_flag": "pets_reflection",
+      "emotion_tags": ["peaceful", "grateful"],
+      "prompt_variants": [
+        "What do you think animals have taught you about love or life?",
+        "If your pet could talk, what do you think they would say to you?",
+        "How have pets changed the way you see companionship or care?",
+        "What role do you think animals play in making life more meaningful?",
+        "When you think about your pets, what emotion comes up first?"
+      ],
+      "followups": [
+        "That’s such a gentle and profound reflection.",
+        "It’s clear that animals have had a lasting impact on your heart.",
+        "You’ve captured beautifully what makes the bond between humans and animals so special."
+      ]
+    }
+  ]
+

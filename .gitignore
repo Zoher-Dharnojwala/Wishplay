@@ -1,0 +1,15 @@
+# Environment variables
+.env
+.env.*
+*.key
+
+# Credentials / secrets
+credentials.json
+
+# PHP OAuth files must NOT contain secrets
+frontend/backend/google_auth.php
+frontend/backend/google_callback.php
+
+# OS / noise
+.DS_Store
+Thumbs.db

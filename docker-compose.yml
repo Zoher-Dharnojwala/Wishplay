@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+
+  php-frontend:
+    build: ./php-frontend
+    container_name: wishplay-php
+    ports:
+      - "8080:80"
+    depends_on:
+      - fastapi
+    networks:
+      - wishnet
+
+  fastapi:
+    build: ./backend-fastapi
+    container_name: wishplay-backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    networks:
+      - wishnet
+
+networks:
+  wishnet:
+    driver: bridge

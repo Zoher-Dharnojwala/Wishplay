@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wishplay | AI Afi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8f8f8;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      border-bottom: 1px dotted #bbb;
+      background: #fff;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 30px;
+      font-weight: 700;
+    }
+    .logo .w { color: #1ba1f2; }
+    .logo .i { color: #7ecf27; }
+    .logo .s { color: #ffc107; }
+    .logo .h { color: #ff4081; }
+    .logo .play { color: #555; }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .hidden { display: none !important; }
+
+    #start-overlay {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #fff;
+    }
+
+    .avatar-image {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 4px solid #e0e0e0;
+      object-fit: cover;
+    }
+
+    .avatar-name {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #1a1a1a;
+      margin-bottom: 1rem;
+    }
+
+    #categorySelect {
+      margin-bottom: 20px;
+      padding: 10px 15px;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: 2px solid #ddd;
+    }
+
+    .start-call-btn {
+      background: #1ba1f2;
+      color: #fff;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 25px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    .start-call-btn:hover {
+      background: #0f85d0;
+    }
+
+    #main-interface {
+      min-height: 100vh;
+      background: #ffffff;
+    }
+
+    .main-content {
+      display: flex;
+      gap: 30px;
+      max-width: 1400px;
+      margin: auto;
+      padding: 25px;
+    }
+
+    .left-column, .right-column {
+      flex: 1;
+      min-width: 300px;
+    }
+
+
+    .main-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .status-badge {
+      background: #ffb8a0;
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .control-btn {
+      background: #fff;
+      border: 2px solid #ff4081;
+      border-radius: 10px;
+      padding: 10px 14px;
+      cursor: pointer;
+    }
+    .control-btn:hover { background: #ff4081; color: #fff; }
+
+    .end-call { border-color: #ff0000; color: #ff0000; }
+    .end-call:hover { background: #ff0000; color: #fff; }
+
+    .transcript-container {
+      background: white;
+      border-radius: 12px;
+      padding: 15px;
+      height: 450px;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+    }
+
+    .transcript-message { margin-bottom: 15px; }
+    .transcript-message .speaker { font-weight: 700; margin-bottom: 4px; }
+    .transcript-message.ai .text { background: #e7dbff; }
+    .transcript-message.user .text { background: #ffdce3; }
+    .transcript-message .text {
+      padding: 10px 15px;
+      border-radius: 12px;
+    }
+
+    /* ---------- ONE LOGOUT MODAL (CLEANED) ---------- */
+    #logoutModal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #logoutModal.active { display: flex; }
+
+    .logout-box {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      width: 320px;
+      text-align: center;
+    }
+
+    .logout-btn {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .logout-btn.cancel { background: #e0e0e0; }
+    .logout-btn.logout { background: #ff3b30; color: white; }
+
+    .avatar-ring {
+        position: relative;
+        width: 230px;
+        height: 230px;
+        padding: 8px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #ffb8a0, #ffd6c9);
+        overflow: hidden;
+    }
+
+    /* Default image styles */
+    .avatar-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        opacity: 0;
+        transform: scale(1.05);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    /* Static avatar visible by default */
+    .avatar-img.active {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .avatar-img.inactive {
+        opacity: 0;
+        transform: scale(1.07);
+    }
+
+    /* Glow while AI talks */
+    .avatar-ring.talking {
+        animation: pulseGlow 1.7s ease-in-out infinite;
+        box-shadow: 0 0 25px rgba(144, 97, 255, 0.5),
+                    0 0 55px rgba(100, 140, 255, 0.4);
+    }
+
+    @keyframes pulseGlow {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.04); }
+        100% { transform: scale(1); }
+    }
+
+
+   
+
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <span class="w">w</span><span class="i">i</span><span class="s">s</span><span class="h">h</span><span class="play">play</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="lifequestions.html">LIFE QUESTIONS</a></li>
+        <li><a href="profile.html">PROFILE</a></li>
+        <li><a href="#" onclick="openLogoutModal()">SIGN OUT</a></li>
+        <img id="navAvatar" src="assets/images/default_user.png" class="nav-avatar">
+        <span id="navUsername"></span>
+
+      </ul>
+    </nav>
+
+    <button onclick="toggleDarkMode()" 
+        style="border:none;background:none;font-size:22px;cursor:pointer;">
+  🌙
+</button>
+
+  </header>
+
+  <div id="start-overlay">
+    <div class="avatar-container">
+      <img src="assets/images/avatar.png" class="avatar-image" />
+    </div>
+    <h1 class="avatar-name">AI Afi</h1>
+
+    <select id="categorySelect">
+      <option value="Introduction">Introduction</option>
+      <option value="Wisdom">Wisdom</option>
+      <option value="Places">Places</option>
+      <option value="Early Childhood">Early Childhood</option>
+      <option value="Teen">Teen</option>
+      <option value="Post Secondary">Post Secondary</option>
+      <option value="Adulthood">Adulthood</option>
+      <option value="Present">Present</option>
+      <option value="Family">Family</option>
+    </select>
+
+    <button id="start-btn" class="start-call-btn">Start a call</button>
+  </div>
+
+  <!-- MAIN INTERFACE -->
+<div id="main-interface" class="hidden">
+
+    <div class="call-info">
+      <span class="call-duration">⏱️ <span id="duration">00:00</span></span>
+      <span class="time-left">⏰ <span id="time-left">5 minutes left</span></span>
+    </div>
+
+    <div class="main-content">
+      <div class="left-column">
+        <div class="main-avatar-container">
+          <div class="avatar-ring" id="avatar-ring">
+              <img id="avatarStatic" class="avatar-img active" src="assets/images/avatar.png">
+              <img id="avatarTalking" class="avatar-img" src="assets/images/Wish Avatar.gif">
+          </div>
+
+
+
+
+          <h2 class="main-name">AI Afi</h2>
+          <div class="status-badge" id="status-badge">Idle</div>
+        </div>
+
+        <div class="controls">
+          <button class="control-btn" id="mic-toggle">🎙️</button>
+          <button class="control-btn end-call" id="end-call">📞</button>
+        </div>
+      </div>
+
+      <div class="right-column">
+        <div class="transcript-container">
+          <h3>Conversation Transcript</h3>
+          <div id="transcript-content">
+            <p class="transcript-welcome">Conversation will appear here...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+  <div id="logoutModal" class="modal-overlay hidden">
+  <div class="logout-backdrop" onclick="closeLogoutModal()"></div>
+
+  <div class="logout-box">
+    <h2>Sign Out?</h2>
+    <p>You’ll need to log in again to continue.</p>
+
+    <div class="logout-btn-row">
+      <button class="logout-btn cancel" onclick="closeLogoutModal()">Cancel</button>
+      <button class="logout-btn confirm" onclick="window.location.href='backend/mysql/logout.php'">
+        Logout
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- iOS STYLE LOGOUT SHEET -->
+<div id="logoutModal" class="modal-overlay hidden">
+    <div class="logout-backdrop" onclick="closeLogoutModal()"></div>
+
+    <div class="logout-sheet">
+        <div class="logout-title">Log Out?</div>
+        <div class="logout-subtitle">You will be returned to the login page.</div>
+
+        <button class="logout-btn cancel" onclick="closeLogoutModal()">Cancel</button>
+        <button class="logout-btn logout" onclick="confirmLogout()">Log Out</button>
+    </div>
+</div>
+<!-- LOGOUT MODAL -->
+
+  <div class="modal-box">
+    <h2>Sign Out?</h2>
+    <p>You’ll need to log in again to continue.</p>
+
+    <button class="modal-btn cancel" onclick="closeLogoutModal()">Cancel</button>
+    <button class="modal-btn logout" onclick="confirmLogout()">Logout</button>
+  </div>
+</div>
+
+<style>
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  background: rgba(0,0,0,0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5000;
+}
+.modal-overlay.hidden { display: none; }
+
+.modal-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  animation: pop 0.25s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.modal-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+.cancel { background: #e0e0e0; }
+.logout { background: #ff4d4d; color: white; }
+</style>
+
+<script src="assets/js/audioPlayer.js"></script>
+<script>
+/* ------------ FRONTEND JS LOGIC (CLEANED + FIXED) ------------ */
+
+const API_BASE = "http://127.0.0.1:8000/conversation";
+
+const startOverlay = document.getElementById("start-overlay");
+const mainInterface = document.getElementById("main-interface");
+const startBtn = document.getElementById("start-btn");
+const avatarRing = document.getElementById("avatar-ring");
+const statusBadge = document.getElementById("status-badge");
+const transcript = document.getElementById("transcript-content");
+const micBtn = document.getElementById("mic-toggle");
+const endBtn = document.getElementById("end-call");
+
+let currentQuestionId = null;
+let isRecording = false;
+let mediaRecorder, audioChunks = [];
+let audioPlayer = new StreamingAudioPlayer();
+
+
+
+/* ------------------ START CALL BUTTON ------------------ */
+startBtn.addEventListener("click", async () => {
+    const silent = new Audio();
+    silent.play().catch(() => {});
+    startOverlay.classList.add("hidden");
+    mainInterface.classList.remove("hidden");
+    await startConversation();
+});
+
+/* ------------------ START CONVERSATION ------------------ */
+async function startConversation() {
+    try {
+        setStatus("thinking", "Connecting...");
+        const category = document.getElementById("categorySelect").value;
+        const userId = localStorage.getItem("user_id");
+
+        const res = await fetch(
+            `${API_BASE}/start?patient_id=${userId}&category=${encodeURIComponent(category)}`
+        );
+
+        const data = await res.json();
+        currentQuestionId = data.question_id || "Q1";
+
+        addMessage("AI Afi", data.first_question_text, "ai");
+        playAudio(data.first_question_audio);
+
+        
+    } catch (err) {
+        console.error(err);
+        addMessage("System", "Error: Failed to connect", "system");
+    }
+}
+
+/* ------------------ RECORDING ------------------ */
+micBtn.addEventListener("click", () => {
+    if (isRecording) stopRecording();
+    else startRecording();
+});
+
+async function startRecording() {
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        mediaRecorder = new MediaRecorder(stream, { mimeType: "audio/webm;codecs=opus" });
+
+        audioChunks = [];
+        mediaRecorder.ondataavailable = e => audioChunks.push(e.data);
+        mediaRecorder.onstop = sendAudio;
+
+        mediaRecorder.start();
+        isRecording = true;
+
+        micBtn.classList.add("active");
+        setStatus("listening", "Listening...");
+        addMessage("System", "🎙️ Recording started...", "system");
+
+    } catch (err) {
+        console.error("Mic denied:", err);
+        addMessage("System", "Microphone access denied", "system");
+    }
+}
+
+function stopRecording() {
+    if (mediaRecorder && isRecording) {
+        mediaRecorder.stop();
+        isRecording = false;
+        micBtn.classList.remove("active");
+        setStatus("thinking", "Processing...");
+    }
+}
+
+/* ------------------ SEND AUDIO TO BACKEND (SSE STREAM) ------------------ */
+async function sendAudio() {
+    const blob = new Blob(audioChunks, { type: "audio/webm" });
+    const file = new File([blob], "audio.webm", { type: "audio/webm" });
+
+    const formData = new FormData();
+    formData.append("patient_id", localStorage.getItem("user_id"));
+    formData.append("question_id", currentQuestionId);
+    formData.append("category", document.getElementById("categorySelect").value);
+    formData.append("audio", file);
+
+    const response = await fetch(`${API_BASE}/reply/stream`, {
+        method: "POST",
+        body: formData
+    });
+
+    if (!response.body) {
+        console.error("❌ No response body... SSE failed.");
+        return;
+    }
+
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder();
+
+    while (true) {
+        const { value, done } = await reader.read();
+        if (done || !value) break;
+
+        let text = "";
+        try {
+            text = decoder.decode(value, { stream: true });
+        } catch (err) {
+            console.error("Decode error:", err);
+            continue;
+        }
+
+        const events = text.split("\n\n");
+
+        for (let evt of events) {
+            if (!evt.trim()) continue;
+
+            const [eventLine, dataLine] = evt.split("\n");
+            if (!eventLine || !dataLine) continue;
+
+            const eventName = eventLine.replace("event:", "").trim();
+            const data = dataLine.replace("data:", "").trim();
+
+            handleEvent(eventName, data);
+        }
+    }
+}
+
+/* ------------------ EVENT HANDLER ------------------ */
+function handleEvent(eventName, data) {
+    if (eventName === "user_transcript") {
+        addMessage("You", data, "user");
+    }
+
+    if (eventName === "next_question") {
+        addMessage("AI Afi", data, "ai");
+    }
+
+    if (eventName === "audio_chunk") {
+        aiStartTalkingAnimation();
+        try {
+            audioPlayer.enqueueChunk(atob(data));  // PCM binary
+        } catch (err) {
+            console.error("Audio decode failed:", err);
+        }
+    }
+
+    if (eventName === "audio_complete") {
+        audioPlayer.endStream();
+        aiStopTalkingAnimation();
+        
+    }
+}
+
+/* ------------------ AUDIO PLAYER ------------------ */
+function playAudio(base64Audio) {
+    if (!base64Audio) return;
+
+    try {
+        const byteCharacters = atob(base64Audio);
+        const bytes = new Uint8Array(byteCharacters.length);
+
+        for (let i = 0; i < byteCharacters.length; i++) {
+            bytes[i] = byteCharacters.charCodeAt(i);
+        }
+
+        const blob = new Blob([bytes], { type: "audio/wav" });
+        const url = URL.createObjectURL(blob);
+        const audio = new Audio(url);
+
+        audio.play().catch(e => console.error("Audio play error:", e));
+
+        
+    } catch (e) {
+        console.error("Audio decode failed:", e);
+    }
+}
+
+/* ------------------ UI HELPERS ------------------ */
+function addMessage(speaker, text, type) {
+    const msg = document.createElement("div");
+    msg.className = `transcript-message ${type}`;
+    msg.innerHTML = `<div class="speaker">${speaker}</div><div class="text">${text}</div>`;
+    transcript.appendChild(msg);
+    transcript.scrollTop = transcript.scrollHeight;
+}
+
+function setStatus(state, text) {
+    statusBadge.textContent = text;
+    avatarRing.classList.remove("talking");
+
+    if (state === "talking") avatarRing.classList.add("talking");
+}
+
+/* ------------------ END CALL ------------------ */
+endBtn.addEventListener("click", saveTranscriptAndExit);
+
+async function saveTranscriptAndExit() {
+    const transcriptText = transcript.innerText.trim();
+    const category = document.getElementById("categorySelect").value;
+
+    const formData = new FormData();
+    formData.append("patient_id", localStorage.getItem("user_id"));
+    formData.append("category", category);
+    formData.append("transcript", transcriptText);
+
+    await fetch(`${API_BASE}/end`, { method: "POST", body: formData });
+    location.reload();
+}
+
+/* ------------------ LOGOUT MODAL ------------------ */
+function openLogoutModal() {
+    document.getElementById("logoutModal").classList.add("active");
+}
+function closeLogoutModal() {
+    document.getElementById("logoutModal").classList.remove("active");
+}
+
+/* ------------------ USER PROFILE LOAD ------------------ */
+document.addEventListener("DOMContentLoaded", () => {
+    fetch("./backend/mysql/api_profile_get.php", { credentials: "include" })
+        .then(res => res.json())
+        .then(data => {
+            if (data.status !== "success") return;
+
+            const u = data.user;
+            localStorage.setItem("user_id", u.id);
+            localStorage.setItem("user_email", u.email);
+            localStorage.setItem("user_name", u.first_name);
+            localStorage.setItem("user_photo", u.photo);
+
+            document.getElementById("navUsername").innerText = u.first_name;
+            const pic = document.getElementById("navAvatar");
+
+            if (u.photo?.startsWith("http")) pic.src = u.photo;
+            else if (u.photo) pic.src = "assets/images/profile_photos/" + u.photo;
+        });
+});
+const avatarStatic = document.getElementById("avatarStatic");
+const avatarTalking = document.getElementById("avatarTalking");
+const avatarRingElm = document.getElementById("avatar-ring");
+
+function aiStartTalkingAnimation() {
+    avatarRingElm.classList.add("talking");
+
+    avatarStatic.classList.remove("active");
+    avatarStatic.classList.add("inactive");
+
+    avatarTalking.classList.remove("inactive");
+    avatarTalking.classList.add("active");
+}
+
+function aiStopTalkingAnimation() {
+    avatarRingElm.classList.remove("talking");
+
+    avatarTalking.classList.remove("active");
+    avatarTalking.classList.add("inactive");
+
+    avatarStatic.classList.remove("inactive");
+    avatarStatic.classList.add("active");
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>

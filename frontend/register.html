@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wishplay • Register</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #e8f0ff, #ffffff);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        width: 420px;
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        animation: fadeIn 0.7s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .logo-img {
+        width: 140px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    label {
+        font-weight: 500;
+        margin-top: 10px;
+        display: block;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        transition: 0.2s;
+    }
+
+    input:focus, select:focus {
+        border-color: #1f75ff;
+        box-shadow: 0 0 5px rgba(31,117,255,0.3);
+        outline: none;
+    }
+
+    .btn {
+        width: 100%;
+        background: #1f75ff;
+        color: white;
+        padding: 12px;
+        border-radius: 8px;
+        border: none;
+        font-size: 15px;
+        margin-top: 15px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .btn:hover {
+        background: #1254c7;
+        transform: translateY(-2px);
+    }
+
+    .google-btn {
+        background: white;
+        color: #444;
+        border: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .google-btn:hover {
+        background: #f5f5f5;
+    }
+
+    .small-text {
+        text-align: center;
+        margin-top: 12px;
+        font-size: 14px;
+    }
+
+    .small-text a {
+        color: #1f75ff;
+        text-decoration: none;
+    }
+    .btn-primary {
+        width: 100%;
+        background: #1f75ff;
+        color: white;
+        padding: 12px;
+        border-radius: 8px;
+        border: none;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 15px;
+        cursor: pointer;
+        transition: 0.25s ease;
+        box-shadow: 0 4px 12px rgba(31,117,255,0.3);
+    }
+
+    .btn-primary:hover {
+        background: #1254c7;
+        transform: translateY(-2px);
+    }
+
+    .btn-primary:active {
+        background: #0d3f99;
+        transform: scale(0.98);
+    }
+    /* Main Blue Button */
+    .enhanced-btn {
+        width: 100%;
+        padding: 14px;
+        border: none;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #1f75ff, #0068ff);
+        box-shadow: 0 6px 16px rgba(31,117,255,0.35);
+        color: white;
+        font-size: 17px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.25s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Hover Shine */
+    .enhanced-btn:hover {
+        transform: translateY(-2px);
+        background: linear-gradient(135deg, #2b82ff, #0a6aff);
+    }
+
+    /* Click Ripple Effect */
+    .enhanced-btn:active {
+        transform: scale(0.97);
+    }
+
+    /* Loading Spinner */
+    .btn-loader {
+        width: 20px;
+        height: 20px;
+        border: 3px solid transparent;
+        border-top-color: white;
+        border-radius: 50%;
+        display: none;
+        animation: spin 0.8s linear infinite;
+        margin: 0 auto;
+    }
+
+    @keyframes spin {
+        100% { transform: rotate(360deg); }
+    }
+
+    /* Hide text while loading */
+    .loading .btn-text {
+        display: none;
+    }
+
+    /* Show loader when loading */
+    .loading .btn-loader {
+        display: block;
+    }
+
+    /* SUCCESS ANIMATION */
+    .success {
+        background: #28c76f !important;
+        box-shadow: 0 6px 16px rgba(40,199,111,0.4);
+    }
+
+    /* ERROR SHAKE */
+    .error-shake {
+        animation: shake 0.3s ease;
+    }
+
+    @keyframes shake {
+        25% { transform: translateX(-5px); }
+        50% { transform: translateX(5px); }
+        75% { transform: translateX(-5px); }
+    }
+
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Wishplay Logo -->
+    <div class="logo">
+        <img src="assets/images/Wishplay.png" class="logo-img" alt="Wishplay Logo">
+    </div>
+
+    <h2>Create Account</h2>
+
+    <form id="registerForm">
+        <label>Username</label>
+        <input type="text" id="username" required>
+
+        <label>First Name</label>
+        <input type="text" id="first_name" required>
+
+        <label>Last Name</label>
+        <input type="text" id="last_name" required>
+
+        <label>Email</label>
+        <input type="email" id="email" required>
+
+        <label>Password</label>
+        <input type="password" id="password" required>
+
+        <label>Confirm Password</label>
+        <input type="password" id="confirm_password" required>
+
+        <label>Phone Number</label>
+        <input type="text" id="phone">
+
+        <label>Gender</label>
+        <select id="gender">
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <button type="button" class="btn-primary enhanced-btn" onclick="registerUser()" id="registerBtn">
+            <span class="btn-text">Register</span>
+            <span class="btn-loader"></span>
+        </button>
+
+    </form>
+
+    <button class="btn google-btn" onclick="googleLogin()">
+        <img src="https://developers.google.com/identity/images/g-logo.png" width="18">
+        Continue with Google
+    </button>
+
+    <div class="small-text">
+        Already have an account? <a href="login.html">Login</a>
+    </div>
+
+</div>
+
+<script>
+function registerUser() {
+    const data = {
+        username: document.getElementById("username").value.trim(),
+        first_name: document.getElementById("first_name").value.trim(),
+        last_name: document.getElementById("last_name").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        password: document.getElementById("password").value.trim(),
+        confirm_password: document.getElementById("confirm_password").value.trim(),
+        phone: document.getElementById("phone").value.trim(),
+        gender: document.getElementById("gender").value
+    };
+
+    if (data.password !== data.confirm_password) {
+        alert("Passwords do not match!");
+        return;
+    }
+
+    fetch("/wishplay/backend/mysql/register.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(resp => {
+        if (resp.status === "success") {
+            alert("Registration Successful!");
+            window.location.href = "login.html";
+        } else {
+            alert(resp.message || "Registration failed.");
+        }
+    });
+}
+
+function googleLogin() {
+    window.location.href = "backend/mysql/user_google_login.php";
+}
+
+
+async function registerUser() {
+    const username = document.getElementById("username").value.trim();
+    const first = document.getElementById("first_name").value.trim();
+    const last = document.getElementById("last_name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+    const confirm = document.getElementById("confirm_password").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const gender = document.getElementById("gender").value;
+
+    if (!username || !first || !email || !password || !confirm) {
+        alert("Please fill all required fields.");
+        return;
+    }
+
+    if (password !== confirm) {
+        alert("Passwords do not match.");
+        return;
+    }
+
+    const payload = {
+        username,
+        first_name: first,
+        last_name: last,
+        email,
+        password,
+        phone,
+        gender
+    };
+
+    const res = await fetch("/wishplay/backend/mysql/register.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+    });
+
+    const data = await res.json();
+
+    if (data.status === "success") {
+        alert("Account created successfully!");
+        window.location.href = "login.html";
+    } else {
+        alert(data.message);
+    }
+}
+async function registerUser() {
+    const btn = document.getElementById("registerBtn");
+
+    // Start Loading
+    btn.classList.add("loading");
+    btn.disabled = true;
+
+    try {
+        const formData = {
+            username: document.getElementById("username").value.trim(),
+            first_name: document.getElementById("first_name").value.trim(),
+            last_name: document.getElementById("last_name").value.trim(),
+            email: document.getElementById("email").value.trim(),
+            password: document.getElementById("password").value.trim(),
+            confirm_password: document.getElementById("confirm_password").value.trim(),
+            phone: document.getElementById("phone").value.trim(),
+            gender: document.getElementById("gender").value.trim()
+        };
+
+        const res = await fetch("/wishplay/backend/mysql/register.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
+        });
+
+        const data = await res.json();
+
+        if (data.status === "success") {
+            btn.classList.remove("loading");
+            btn.classList.add("success");
+            btn.querySelector(".btn-text").textContent = "Success!";
+            
+            setTimeout(() => {
+                window.location.href = "login.html";
+            }, 700);
+        } else {
+            throw new Error(data.message);
+        }
+
+    } catch (err) {
+        btn.classList.add("error-shake");
+        btn.classList.remove("loading");
+        btn.disabled = false;
+
+        setTimeout(() => btn.classList.remove("error-shake"), 400);
+
+        alert(err.message);
+    }
+}
+
+
+</script>
+
+</body>
+</html>

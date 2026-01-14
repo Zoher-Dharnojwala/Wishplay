@@ -1,0 +1,96 @@
+[
+  {
+    "id": "A1",
+    "priority": 50,
+    "topic_flag": "adulthood_transition",
+    "emotion_tags": ["growth", "stress", "hope"],
+    "prompt_variants": [
+      "How did you first adjust to adulthood and all the responsibilities that came with it?",
+      "What was the beginning of adulthood like for you emotionally and practically?",
+      "Do you remember the moment you realized you were truly stepping into adult life?",
+      "How did life change for you when adulthood really started to feel real?",
+      "What did the early stages of adulthood look and feel like for you?"
+    ],
+    "followups": [
+      "Those first steps into adulthood can be overwhelming but meaningful.",
+      "It sounds like that phase shaped a lot of who you became.",
+      "Thank you for sharing — transitions like that can leave a deep mark."
+    ]
+  },
+
+  {
+    "id": "A2",
+    "priority": 51,
+    "topic_flag": "career_beginnings",
+    "emotion_tags": ["ambition", "stress", "hope"],
+    "prompt_variants": [
+      "What was your early career journey like when you first entered the working world?",
+      "How did you find your direction professionally when you were just starting out?",
+      "What were some of the first real jobs or responsibilities you took on?",
+      "Did your early career unfold the way you expected, or did it surprise you?",
+      "When you think back to the start of your career, what moments stand out?"
+    ],
+    "followups": [
+      "Early career decisions often shape the long-term path in unexpected ways.",
+      "It sounds like those choices helped define your sense of direction.",
+      "Thank you — that kind of reflection says a lot about your growth."
+    ]
+  },
+
+  {
+    "id": "A3",
+    "priority": 52,
+    "topic_flag": "adult_challenges",
+    "emotion_tags": ["stress", "sadness", "resilience"],
+    "prompt_variants": [
+      "What were some challenges you faced as an adult that really tested you?",
+      "Were there difficult moments in adulthood that forced you to grow?",
+      "What obstacles in adult life have been the hardest to navigate?",
+      "Did adulthood bring any unexpected hardships that shaped you?",
+      "Is there a tough experience from adulthood that still stands out to you?"
+    ],
+    "followups": [
+      "That kind of experience takes real strength to talk about.",
+      "Your resilience shows through in how you describe that moment.",
+      "Thank you for trusting this space with something so personal."
+    ]
+  },
+
+  {
+    "id": "A4",
+    "priority": 53,
+    "topic_flag": "adult_relationships",
+    "emotion_tags": ["connection", "nostalgia", "joy"],
+    "prompt_variants": [
+      "Who were the important people who shaped your adulthood?",
+      "Did you form relationships in adulthood that deeply changed or influenced you?",
+      "What connections or friendships stood out most during your adult years?",
+      "Was there someone who supported you during a defining moment of adulthood?",
+      "If you think about your adult relationships, what memories come to mind first?"
+    ],
+    "followups": [
+      "Relationships in adulthood can be incredibly grounding.",
+      "It sounds like those connections had real meaning for you.",
+      "Thank you for opening up about the people who shaped that stage of life."
+    ]
+  },
+
+  {
+    "id": "A5",
+    "priority": 54,
+    "topic_flag": "adult_identity_growth",
+    "emotion_tags": ["growth", "reflection", "hope"],
+    "prompt_variants": [
+      "How did adulthood shape the person you grew into over time?",
+      "What experiences helped you discover more about who you are as an adult?",
+      "When you think about your personal growth in adulthood, what stands out?",
+      "How have your values or beliefs evolved as you’ve moved through adulthood?",
+      "What moments made you realize you were changing or becoming more yourself?"
+    ],
+    "followups": [
+      "Your reflections reveal a lot about your evolution over time.",
+      "It’s powerful hearing how your identity grew during those years.",
+      "Thank you — those moments of growth shape us in lasting ways."
+    ]
+  }
+]

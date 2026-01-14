@@ -1,0 +1,92 @@
+[
+  {
+    "id": "P1",
+    "priority": 12,
+    "topic_flag": "childhood_home",
+    "emotion_tags": ["nostalgic", "warm"],
+    "prompt_variants": [
+      "Where did you grow up? What was your childhood home like?",
+      "Can you describe the place where you spent most of your early years?",
+      "What memories come to mind when you think of your first home?",
+      "If you close your eyes, what do you see or feel when you picture your childhood home?",
+      "Tell me about the place you first called home — what made it special?"
+    ],
+    "followups": [
+      "That sounds like such a meaningful place in your story.",
+      "I can almost picture it — thank you for painting that scene for me.",
+      "It’s beautiful how vividly you remember that environment."
+    ]
+  },
+  {
+    "id": "P2",
+    "priority": 13,
+    "topic_flag": "hometown_memories",
+    "emotion_tags": ["reflective", "gentle"],
+    "prompt_variants": [
+      "What was your hometown like growing up?",
+      "Was your hometown quiet or lively — how would you describe it?",
+      "Do you remember any special spots in your neighborhood that meant a lot to you?",
+      "What did you love most about the place you grew up in?",
+      "If you could revisit your hometown today, what would you want to see first?"
+    ],
+    "followups": [
+      "That must bring back some powerful memories.",
+      "It sounds like your hometown still holds a piece of your heart.",
+      "Those early surroundings clearly shaped parts of who you are."
+    ]
+  },
+  {
+    "id": "P3",
+    "priority": 14,
+    "topic_flag": "favorite_places",
+    "emotion_tags": ["peaceful", "fond"],
+    "prompt_variants": [
+      "Is there a place you’ve visited that has always stayed in your heart?",
+      "Do you have a favorite place — somewhere that brings you peace or joy?",
+      "What’s one place you’ve been that always makes you smile when you think of it?",
+      "Is there a location that feels like your personal sanctuary?",
+      "Can you share a story about a place that means a lot to you?"
+    ],
+    "followups": [
+      "That sounds like a wonderful place to hold close.",
+      "I can sense how comforting that space is for you.",
+      "It’s amazing how certain places become part of us forever."
+    ]
+  },
+  {
+    "id": "P4",
+    "priority": 15,
+    "topic_flag": "travel_experiences",
+    "emotion_tags": ["curious", "enthusiastic"],
+    "prompt_variants": [
+      "Have you traveled much in your life? Is there a trip that stands out the most?",
+      "What’s one travel experience that really changed you?",
+      "Is there a destination that left a deep impression on you?",
+      "What’s the most memorable journey you’ve taken — and why?",
+      "Have you ever been somewhere that made you see life differently?"
+    ],
+    "followups": [
+      "That must have been an unforgettable adventure.",
+      "Travel often leaves us with the most vivid stories — thank you for sharing that one.",
+      "It sounds like that trip gave you something special to carry forward."
+    ]
+  },
+  {
+    "id": "P5",
+    "priority": 16,
+    "topic_flag": "current_place",
+    "emotion_tags": ["grounded", "peaceful"],
+    "prompt_variants": [
+      "Where do you live now, and what do you enjoy most about it?",
+      "What’s your current home like — what makes it feel like yours?",
+      "How does the place you live in now reflect who you are today?",
+      "What do you love most about your surroundings these days?",
+      "If someone visited your home today, what would they notice first?"
+    ],
+    "followups": [
+      "That sounds like a space that really feels like you.",
+      "Your description gives a warm sense of where you are now.",
+      "It’s wonderful that your current home brings you comfort and peace."
+    ]
+  }
+]

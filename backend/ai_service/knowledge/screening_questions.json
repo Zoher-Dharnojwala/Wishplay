@@ -1,0 +1,110 @@
+[
+  {
+    "id": "S1",
+    "priority": 1,
+    "topic_flag": "priority_focus",
+    "emotion_tags": ["curious", "reflective"],
+    "prompt_variants": [
+      "If you had to choose, which of these feels most important to you — your family, your past, or your values and beliefs?",
+      "Would you say your family, your personal journey, or your beliefs define you the most?",
+      "Between your family, your past experiences, and your values, which do you feel shapes your life the most?",
+      "What would you say holds the most meaning for you — family, your story, or your core values?",
+      "If you had to focus on one — family, past, or values — which one speaks to your heart right now?"
+    ],
+    "followups": [
+      "That’s insightful. It really helps me understand what feels most meaningful to you.",
+      "That says a lot about what you value most deeply.",
+      "It’s beautiful that you recognize what grounds you in life."
+    ]
+  },
+  {
+    "id": "S2",
+    "priority": 2,
+    "topic_flag": "family_allowed",
+    "emotion_tags": ["neutral", "empathetic"],
+    "prompt_variants": [
+      "Would you be comfortable answering a few questions about your family?",
+      "If you’re okay with it, could we talk a bit about your family?",
+      "Are you open to sharing a little about your family life?",
+      "Only if it feels right for you — may I ask some questions about your family?",
+      "Would you like to include your family in our conversation?"
+    ],
+    "followups": [
+      "Thank you for letting me know. I’ll make sure we respect your comfort level.",
+      "Perfect, I appreciate your openness.",
+      "Got it — I’ll keep that in mind as we go forward."
+    ]
+  },
+  {
+    "id": "S3",
+    "priority": 3,
+    "topic_flag": "partners_allowed",
+    "emotion_tags": ["neutral", "gentle"],
+    "prompt_variants": [
+      "Are you okay if we talk a bit about your partner or romantic relationships?",
+      "Would you feel comfortable answering some questions about your partner?",
+      "Would you prefer to include or skip questions about your romantic life?",
+      "Is it okay to explore a few thoughts around your relationship experiences?",
+      "Would you be alright discussing your partner, or would you rather not?"
+    ],
+    "followups": [
+      "Understood, thank you for sharing your preference.",
+      "I’ll adjust our conversation accordingly.",
+      "That’s completely fine — I’ll make sure we focus elsewhere."
+    ]
+  },
+  {
+    "id": "S4",
+    "priority": 4,
+    "topic_flag": "children_allowed",
+    "emotion_tags": ["warm", "empathetic"],
+    "prompt_variants": [
+      "Do you have children, and if yes, would you mind answering a few questions about them?",
+      "If you’re a parent, would you feel okay sharing a few stories about your children?",
+      "Would you be comfortable if I asked a few questions about your kids or family life?",
+      "Do you have children you’d like to include in our reflections?",
+      "If you have children, do you want to talk about them, or would you prefer not to?"
+    ],
+    "followups": [
+      "That’s lovely — thank you for letting me know.",
+      "Completely understood — I’ll make sure we stay within your comfort zone.",
+      "Got it. We’ll include or skip those topics accordingly."
+    ]
+  },
+  {
+    "id": "S5",
+    "priority": 5,
+    "topic_flag": "restricted_people",
+    "emotion_tags": ["neutral", "calm"],
+    "prompt_variants": [
+      "Is there anyone you’d prefer not to talk about during our conversations?",
+      "Are there people or relationships you’d like to keep private?",
+      "Is there anyone you’d rather I avoid mentioning or asking about?",
+      "Would you like me to skip questions about any specific person?",
+      "Is there someone you’d prefer not to include in these reflections?"
+    ],
+    "followups": [
+      "Thank you, I’ll make sure we avoid mentioning them.",
+      "That’s perfectly okay — I’ll respect those boundaries.",
+      "I appreciate you setting that boundary clearly."
+    ]
+  },
+  {
+    "id": "S6",
+    "priority": 6,
+    "topic_flag": "restricted_topics",
+    "emotion_tags": ["gentle", "respectful"],
+    "prompt_variants": [
+      "Is there anything in your past you’d prefer not to talk about?",
+      "Are there topics or experiences you’d rather we avoid?",
+      "Would you like to skip any sensitive subjects from your past?",
+      "Are there any memories you don’t want to revisit here?",
+      "Is there anything that might feel too heavy to discuss right now?"
+    ],
+    "followups": [
+      "Thank you for sharing that — I’ll make sure we steer clear of those areas.",
+      "I understand completely. Your comfort always comes first.",
+      "That’s noted — we’ll keep our conversation focused where you feel safe."
+    ]
+  }
+]

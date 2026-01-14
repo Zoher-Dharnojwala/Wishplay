@@ -1,0 +1,380 @@
+[
+  {
+    "id": "Q1",
+    "priority": 1,
+    "emotion_tags": ["joy", "neutral"],
+    "prompt_variants": [
+      "Can you tell me about something that always brings you joy?",
+      "What kinds of moments make you feel light and happy inside?",
+      "If I asked you to name a few things that truly make you smile, what would they be?"
+    ],
+    "followups": [
+      "That sounds wonderful. What makes that so meaningful for you?",
+      "I love that. How often do you get to enjoy that these days?"
+    ]
+  },
+  {
+    "id": "Q2",
+    "priority": 1,
+    "emotion_tags": ["neutral"],
+    "prompt_variants": [
+      "We all have those little things that get under our skin — what are yours?",
+      "What small habits or situations annoy you the most?",
+      "What’s one thing that instantly tests your patience?"
+    ],
+    "followups": [
+      "Haha, I get that! How do you usually handle it when it happens?",
+      "Interesting — do you think that changed as you grew older?"
+    ]
+  },
+  {
+    "id": "Q3",
+    "priority": 2,
+    "emotion_tags": ["joy", "nostalgia"],
+    "prompt_variants": [
+      "Looking back, what parts of your life do you cherish the most?",
+      "If you could relive one chapter of your life, which would it be?",
+      "What time in your life do you remember most fondly?"
+    ],
+    "followups": [
+      "That must have been a beautiful time. What made it so special?",
+      "It sounds like that memory still means a lot to you."
+    ]
+  },
+  {
+    "id": "Q4",
+    "priority": 1,
+    "emotion_tags": ["joy", "pride"],
+    "prompt_variants": [
+      "When was a time you felt truly proud of yourself?",
+      "Can you describe your happiest moment?",
+      "What moment in your life makes you smile every time you think of it?"
+    ],
+    "followups": [
+      "That’s such a powerful memory. How did it shape you afterward?",
+      "I can tell that moment really meant something to you."
+    ]
+  },
+  {
+    "id": "Q5",
+    "priority": 1,
+    "emotion_tags": ["legacy", "reflective"],
+    "prompt_variants": [
+      "If people remembered you for just one thing, what would it be?",
+      "What kind of legacy do you hope to leave behind?",
+      "How would you like others to think of you after you’re gone?"
+    ],
+    "followups": [
+      "That’s a beautiful way to be remembered.",
+      "It sounds like your values really shine through in that."
+    ]
+  },
+  {
+    "id": "Q6",
+    "priority": 1,
+    "emotion_tags": ["pride", "neutral"],
+    "prompt_variants": [
+      "What do you feel have been your most important successes?",
+      "What accomplishments mean the most to you personally?",
+      "What achievements are you most proud of?"
+    ],
+    "followups": [
+      "That’s amazing — what helped you reach that success?",
+      "I can hear the pride in your voice. You’ve earned it."
+    ]
+  },
+  {
+    "id": "Q7",
+    "priority": 1,
+    "emotion_tags": ["sadness", "stress"],
+    "prompt_variants": [
+      "Would you share a time that tested your patience or spirit?",
+      "What was the most frustrating period in your life?",
+      "Was there a time that really challenged you emotionally?"
+    ],
+    "followups": [
+      "That sounds like it was very difficult. How did you get through it?",
+      "You showed a lot of strength facing that."
+    ]
+  },
+  {
+    "id": "Q8",
+    "priority": 2,
+    "emotion_tags": ["stress", "resilience"],
+    "prompt_variants": [
+      "When life felt overwhelming, what helped you find calm again?",
+      "How did you handle things when you were stressed?",
+      "What are your go-to ways of coping when things get tough?"
+    ],
+    "followups": [
+      "That’s a healthy way to manage stress.",
+      "It sounds like you learned a lot from those moments."
+    ]
+  },
+  {
+    "id": "Q9",
+    "priority": 2,
+    "emotion_tags": ["nostalgia"],
+    "prompt_variants": [
+      "When you reflect on your life, which moments stand out the most?",
+      "What are the most memorable parts of your journey so far?",
+      "What experiences do you remember most vividly?"
+    ],
+    "followups": [
+      "Those sound like incredible memories.",
+      "What about them makes them stand out to you?"
+    ]
+  },
+  {
+    "id": "Q10",
+    "priority": 2,
+    "emotion_tags": ["curious"],
+    "prompt_variants": [
+      "Tell me more about those memorable times.",
+      "I’d love to hear more about that — what made it so meaningful?",
+      "Could you describe how that felt for you in the moment?"
+    ],
+    "followups": [
+      "That sounds wonderful — thank you for sharing.",
+      "It’s clear that memory still brings emotion to your voice."
+    ]
+  },
+  {
+    "id": "Q11",
+    "priority": 3,
+    "emotion_tags": ["regret", "sadness"],
+    "prompt_variants": [
+      "Is there someone you wish you could say sorry to?",
+      "If you could go back and apologize for something, what would it be?",
+      "Looking back, is there something you’d do differently to make amends?"
+    ],
+    "followups": [
+      "That shows a lot of reflection and compassion.",
+      "It’s never easy to face those moments — thank you for opening up."
+    ]
+  },
+  {
+    "id": "Q12",
+    "priority": 1,
+    "emotion_tags": ["faith", "neutral"],
+    "prompt_variants": [
+      "Do you follow any particular faith or spiritual path?",
+      "Are you religious or more spiritual in your outlook?",
+      "Would you say spirituality plays a role in your life?"
+    ],
+    "followups": [
+      "That’s interesting. What about it feels most meaningful to you?",
+      "It sounds like that belief brings you peace."
+    ]
+  },
+  {
+    "id": "Q13",
+    "priority": 1,
+    "emotion_tags": ["faith", "joy"],
+    "prompt_variants": [
+      "What do you like most about your religion or beliefs?",
+      "Are there traditions or rituals that bring you comfort?",
+      "What aspects of your faith make you feel closest to peace?"
+    ],
+    "followups": [
+      "That’s lovely. It sounds like it really centers you.",
+      "It’s nice how much calm that brings into your life."
+    ]
+  },
+  {
+    "id": "Q14",
+    "priority": 2,
+    "emotion_tags": ["reflective"],
+    "prompt_variants": [
+      "What events or people have changed your life the most?",
+      "What were the biggest turning points for you?",
+      "Who or what influenced your life direction the most?"
+    ],
+    "followups": [
+      "Those sound like life-shaping experiences.",
+      "You’ve clearly grown a lot through those moments."
+    ]
+  },
+  {
+    "id": "Q15",
+    "priority": 2,
+    "emotion_tags": ["inspiration", "neutral"],
+    "prompt_variants": [
+      "Who did you look up to as a kid, a teen, or an adult?",
+      "Who has inspired you most throughout your life?",
+      "Who were your biggest role models growing up?"
+    ],
+    "followups": [
+      "That’s inspiring — sounds like they really guided you.",
+      "What’s something you learned from them that still stays with you?"
+    ]
+  },
+  {
+    "id": "Q16",
+    "priority": 1,
+    "emotion_tags": ["trust"],
+    "prompt_variants": [
+      "Who could you always confide in when you needed to talk?",
+      "Who did you trust most deeply, and why?",
+      "Who was the person you could always count on to listen?"
+    ],
+    "followups": [
+      "That’s special — it’s a gift to have someone like that.",
+      "It sounds like they played a very meaningful role in your life."
+    ]
+  },
+  {
+    "id": "Q17",
+    "priority": 1,
+    "emotion_tags": ["regret", "reflective"],
+    "prompt_variants": [
+      "If you could go back and change something, what would it be?",
+      "Would you have done anything differently in your life?",
+      "Are there choices you wish you’d made differently?"
+    ],
+    "followups": [
+      "That’s such an honest reflection.",
+      "It’s powerful to look back with that kind of self-awareness."
+    ]
+  },
+  {
+    "id": "Q18",
+    "priority": 1,
+    "emotion_tags": ["wisdom"],
+    "prompt_variants": [
+      "If you could speak to your younger self right now, what would you say?",
+      "What advice would you give to your younger self?",
+      "What do you wish your younger self had known back then?"
+    ],
+    "followups": [
+      "That’s really insightful.",
+      "You’ve clearly learned a lot through your journey."
+    ]
+  },
+  {
+    "id": "Q19",
+    "priority": 2,
+    "emotion_tags": ["values"],
+    "prompt_variants": [
+      "What are the most important things in your life?",
+      "What matters most to you these days — people, passions, or principles?",
+      "If you had to name your top three priorities, what would they be?"
+    ],
+    "followups": [
+      "That says a lot about who you are.",
+      "Those values really shine through in your story."
+    ]
+  },
+  {
+    "id": "Q20",
+    "priority": 2,
+    "emotion_tags": ["growth"],
+    "prompt_variants": [
+      "In what ways do you think you’ve changed as you grew older?",
+      "How have you evolved over time?",
+      "What lessons have age and experience taught you?"
+    ],
+    "followups": [
+      "That’s a beautiful perspective.",
+      "It sounds like you’ve grown wiser and more grounded."
+    ]
+  },
+  {
+    "id": "Q21",
+    "priority": 2,
+    "emotion_tags": ["mentorship"],
+    "prompt_variants": [
+      "What advice did you get from your parents or mentors that you’d pass on?",
+      "What lessons from others have stuck with you?",
+      "What’s a piece of wisdom you’d want others to remember?"
+    ],
+    "followups": [
+      "That’s timeless advice.",
+      "It sounds like those lessons have really guided you."
+    ]
+  },
+  {
+    "id": "Q22",
+    "priority": 1,
+    "emotion_tags": ["hope"],
+    "prompt_variants": [
+      "If you were given one wish, what would you ask for?",
+      "If you could change one thing about the world, what would it be?",
+      "What’s the one thing your heart wishes for most?"
+    ],
+    "followups": [
+      "That’s a heartfelt wish.",
+      "It’s beautiful that you think about others in that way."
+    ]
+  },
+  {
+    "id": "Q23",
+    "priority": 2,
+    "emotion_tags": ["ambition"],
+    "prompt_variants": [
+      "What does success look like to you?",
+      "When do you personally feel you’ve succeeded?",
+      "How do you define success in your life?"
+    ],
+    "followups": [
+      "That’s such a grounded definition of success.",
+      "It sounds like you’ve found your own version of fulfillment."
+    ]
+  },
+  {
+    "id": "Q24",
+    "priority": 2,
+    "emotion_tags": ["creativity"],
+    "prompt_variants": [
+      "Does art play a role in your life?",
+      "Do you find comfort or inspiration in art, music, or creativity?",
+      "What forms of art speak to you the most?"
+    ],
+    "followups": [
+      "That’s inspiring — art has such a healing power.",
+      "It’s wonderful how creativity can bring so much meaning."
+    ]
+  },
+  {
+    "id": "Q25",
+    "priority": 2,
+    "emotion_tags": ["joy"],
+    "prompt_variants": [
+      "How important is entertainment or fun in life to you?",
+      "Do you think having fun and being playful are important?",
+      "What kinds of things help you relax and laugh?"
+    ],
+    "followups": [
+      "That sounds like a great way to unwind.",
+      "It’s important to hold onto that sense of playfulness."
+    ]
+  },
+  {
+    "id": "Q26",
+    "priority": 2,
+    "emotion_tags": ["joy"],
+    "prompt_variants": [
+      "How important is play in your life?",
+      "What does playfulness mean to you as an adult?",
+      "Do you think we lose something when we stop playing?"
+    ],
+    "followups": [
+      "That’s such a lovely way to look at play.",
+      "It’s amazing how joy can come from simple moments of fun."
+    ]
+  },
+  {
+    "id": "Q27",
+    "priority": 1,
+    "emotion_tags": ["philosophy", "neutral"],
+    "prompt_variants": [
+      "That’s a big question — what do you think the meaning of life is?",
+      "When you think about life, what gives it meaning for you?",
+      "What do you believe we’re all here for?"
+    ],
+    "followups": [
+      "That’s such a profound perspective.",
+      "I love the way you think about life’s bigger picture."
+    ]
+  }
+]

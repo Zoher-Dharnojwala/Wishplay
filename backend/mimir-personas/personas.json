@@ -1,0 +1,57 @@
+[
+  {
+    "role": "Patient",
+    "name": "Mary Thompson",
+    "age": 74,
+    "photo": "https://images.unsplash.com/photo-1581574204975-91e65a8b49b2",
+    "background": "Retired school teacher, in assisted living.",
+    "goals": ["Share family traditions and life lessons", "Record stories in short, low-energy sessions"],
+    "needs": ["Simple, slow-paced conversations", "Large text UI and supportive AI tone"],
+    "frustrations": ["Fatigue during long sessions", "Vision issues"],
+    "quote": "I want my family to remember me for who I am, not just what I did."
+  },
+  {
+    "role": "Patient",
+    "name": "Carlos Ramirez",
+    "age": 82,
+    "photo": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
+    "background": "Immigrant mechanic, proud of cultural heritage.",
+    "goals": ["Preserve cultural traditions, recipes, songs", "Pass down immigrant stories"],
+    "needs": ["Voice-first interface", "Native language recording support"],
+    "frustrations": ["Hearing difficulties", "Relies on children to set up devices"],
+    "quote": "I want my grandchildren to know where they come from."
+  },
+  {
+    "role": "Patient",
+    "name": "Amina Khan",
+    "age": 68,
+    "photo": "https://images.unsplash.com/photo-1594810374673-0c25f4e7e1e6",
+    "background": "Community volunteer, strong faith identity.",
+    "goals": ["Leave spiritual reflections and blessings", "Preserve community values"],
+    "needs": ["Emotionally sensitive AI", "Adaptive pacing with spiritual tone"],
+    "frustrations": ["Distrust of AI handling private reflections"],
+    "quote": "My words of faith are the legacy I want to leave."
+  },
+  {
+    "role": "Patient",
+    "name": "John Miller",
+    "age": 62,
+    "photo": "https://images.unsplash.com/photo-1527980965255-d3b416303d12",
+    "background": "Former business owner, highly organized.",
+    "goals": ["Record financial lessons and strategies", "Organize stories by topic"],
+    "needs": ["Structured prompts", "Editing and export control"],
+    "frustrations": ["Does not like being locked into rigid systems"],
+    "quote": "I want my children to learn from my successes and mistakes."
+  },
+  {
+    "role": "Patient",
+    "name": "Mei Lin",
+    "age": 80,
+    "photo": "https://images.unsplash.com/photo-1607746882042-944635dfe10e",
+    "background": "Grandmother with large extended family.",
+    "goals": ["Preserve family tree and photo memories", "Capture family stories across generations"],
+    "needs": ["Visual support (photos, captions, family tree)", "Bilingual support"],
+    "frustrations": ["Limited English skills", "Low tech comfort"],
+    "quote": "Family comes first, and I want every branch of our tree remembered."
+  }
+]

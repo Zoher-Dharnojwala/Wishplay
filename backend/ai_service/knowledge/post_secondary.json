@@ -1,0 +1,96 @@
+[
+  {
+    "id": "PS1",
+    "priority": 40,
+    "topic_flag": "education_transition",
+    "emotion_tags": ["curiosity", "growth", "nostalgia"],
+    "prompt_variants": [
+      "What was the transition into post-secondary life like for you?",
+      "How did it feel stepping into college or university for the first time?",
+      "What do you remember about entering that new phase of independence?",
+      "Was the shift from high school to post-secondary smooth, overwhelming, or something in between?",
+      "How did you adjust emotionally and mentally when you began post-secondary studies?"
+    ],
+    "followups": [
+      "That shift often shapes how we step into adulthood.",
+      "It sounds like that was a meaningful turning point.",
+      "Thank you for sharing that — those transitions can be powerful."
+    ]
+  },
+
+  {
+    "id": "PS2",
+    "priority": 41,
+    "topic_flag": "academic_identity",
+    "emotion_tags": ["growth", "ambition", "stress"],
+    "prompt_variants": [
+      "What did you study, and what drew you to that field?",
+      "How did you choose your program or major?",
+      "Did your academic path match who you felt you were at the time?",
+      "What subjects or areas of study captured your interest the most?",
+      "Was your program something you loved, struggled with, or both?"
+    ],
+    "followups": [
+      "Your path reflects a lot about your values at that time.",
+      "It sounds like your studies played a big role in shaping your goals.",
+      "That's a meaningful reflection — thank you for sharing it."
+    ]
+  },
+
+  {
+    "id": "PS3",
+    "priority": 42,
+    "topic_flag": "post_secondary_challenges",
+    "emotion_tags": ["stress", "sadness", "resilience"],
+    "prompt_variants": [
+      "What were some of the challenges you faced during your college or university years?",
+      "Did you go through any difficult moments in post-secondary life?",
+      "Was there something during school that pushed you beyond your comfort zone?",
+      "What obstacles tested your emotional or mental strength during that period?",
+      "Is there a hard experience from that time that still stands out to you?"
+    ],
+    "followups": [
+      "That sounds like it took a lot of strength to navigate.",
+      "Your resilience really comes through as you talk about this.",
+      "Thank you for being open — those moments can be tough to revisit."
+    ]
+  },
+
+  {
+    "id": "PS4",
+    "priority": 43,
+    "topic_flag": "social_life_post_secondary",
+    "emotion_tags": ["joy", "connection", "nostalgia"],
+    "prompt_variants": [
+      "Who were the important people you connected with during your post-secondary years?",
+      "Did you build friendships or relationships that shaped you in some way?",
+      "What was your social life like during that stage of your journey?",
+      "Was there someone during that time who really understood or supported you?",
+      "If you think back to your post-secondary relationships, what stands out most?"
+    ],
+    "followups": [
+      "Those kinds of bonds shape so much of our young adult life.",
+      "It sounds like those connections had a real impact on you.",
+      "The way you talk about those relationships shows how meaningful they were."
+    ]
+  },
+
+  {
+    "id": "PS5",
+    "priority": 44,
+    "topic_flag": "dreams_and_direction",
+    "emotion_tags": ["ambition", "hope", "creativity"],
+    "prompt_variants": [
+      "What dreams or goals guided you during your post-secondary years?",
+      "How did that period influence the direction you wanted your life to go?",
+      "Were you clear about your purpose back then, or were you still figuring it out?",
+      "What did you imagine your future would look like during that time?",
+      "If you could revisit your post-secondary self, what hopes were strongest then?"
+    ],
+    "followups": [
+      "Your dreams during that time reveal a lot about your drive and vision.",
+      "It’s powerful hearing how your goals evolved from those years.",
+      "Thank you for sharing that — those early ambitions stay with us in surprising ways."
+    ]
+  }
+]

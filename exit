@@ -1,0 +1,84 @@
+[35m.env[m[36m:[mOPENAI_API_[1;31mKEY[m=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
+[35m.env[m[36m:[mGOOGLE_API_[1;31mKEY[m=AIzaSyCV1kSozxUBS5Q2qZBYMdM3cqsLeQnlsYI
+[35m.env[m[36m:[mELEVENLABS_API_[1;31mKEY[m=ac7df93ea753754b5773002cd225e9bd5b086480257ead7152f829b5816801ae
+[35m.env[m[36m:[mANTHROPIC_API_[1;31mKEY[m=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
+Binary file [35mfrontend/assets/images/Wish Avatar.gif[m matches
+Binary file [35mfrontend/assets/images/avatar.png[m matches
+[35mfrontend/backend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/composer.lock[m[36m:[m                "ext-dom": "Install the DOM extension to load XML formatted public [1;31mkey[ms.",
+[35mfrontend/backend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/google_callback.php[m[36m:[m    ON DUPLICATE [1;31mKEY[m UPDATE
+[35mfrontend/backend/vendor/composer/ClassLoader.php[m[36m:[m     * Returns the currently registered loaders [1;31mkey[med by their corresponding vendor directories.
+[35mfrontend/backend/vendor/composer/InstalledVersions.php[m[36m:[m            $packages[] = array_[1;31mkey[ms($installed['versions']);
+[35mfrontend/backend/vendor/composer/InstalledVersions.php[m[36m:[m        return array_[1;31mkey[ms(array_flip(\call_user_func_array('array_merge', $packages)));
+[35mfrontend/backend/vendor/composer/InstalledVersions.php[m[36m:[m            if (array_[1;31mkey[m_exists('aliases', $installed['versions'][$packageName])) {
+[35mfrontend/backend/vendor/composer/InstalledVersions.php[m[36m:[m            if (array_[1;31mkey[m_exists('replaced', $installed['versions'][$packageName])) {
+[35mfrontend/backend/vendor/composer/InstalledVersions.php[m[36m:[m            if (array_[1;31mkey[m_exists('provided', $installed['versions'][$packageName])) {
+[35mfrontend/backend/vendor/composer/installed.json[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/vendor/composer/installed.json[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/vendor/composer/installed.json[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/vendor/composer/installed.json[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/vendor/composer/installed.json[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/vendor/composer/installed.json[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/vendor/composer/installed.json[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/vendor/composer/installed.json[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/vendor/composer/installed.json[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/vendor/composer/installed.json[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/vendor/composer/installed.json[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/vendor/composer/installed.json[m[36m:[m                "ext-dom": "Install the DOM extension to load XML formatted public [1;31mkey[ms.",
+[35mfrontend/backend/vendor/composer/installed.json[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/vendor/composer/installed.json[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/vendor/composer/installed.json[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/vendor/composer/installed.json[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/vendor/composer/installed.json[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/vendor/composer/installed.json[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/backend/vendor/composer/installed.json[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/composer.lock[m[36m:[m                "ext-dom": "Install the DOM extension to load XML formatted public [1;31mkey[ms.",
+[35mfrontend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/composer.lock[m[36m:[m            "[1;31mkey[mwords": [
+[35mfrontend/index.html[m[36m:[m    @[1;31mkey[mframes pulseGlow {
+[35mfrontend/index.html[m[36m:[m@[1;31mkey[mframes pop {
+[35mfrontend/lifequestions.html[m[36m:[m@[1;31mkey[mframes fadeIn{
+[35mfrontend/lifequestions.html[m[36m:[m        <input id="searchInput" on[1;31mkey[mup="searchCards()" type="text" placeholder="Search questions...">
+[35mfrontend/lifequestions.html[m[36m:[m        Object.[1;31mkey[ms(grouped).forEach(dateLabel=>{
+[35mfrontend/login.html[m[36m:[m    @[1;31mkey[mframes fadeIn {
+[35mfrontend/login.html[m[36m:[m    api[1;31mKey[m: "AIzaSyA_Y65x8uHDnuP2fxmpXLsNq9TxNZuGQLo",
+[35mfrontend/register.html[m[36m:[m    @[1;31mkey[mframes fadeIn {
+[35mfrontend/register.html[m[36m:[m    @[1;31mkey[mframes spin {
+[35mfrontend/register.html[m[36m:[m    @[1;31mkey[mframes shake {
+Binary file [35mfrontend/uploads/profile_photos/user_1_1765551326.png[m matches
+Binary file [35mfrontend/uploads/profile_photos/user_1_1765564362.png[m matches
+Binary file [35mfrontend/uploads/profile_photos/user_1_1765724835.png[m matches
+Binary file [35mfrontend/uploads/profile_photos/user_1_1765735795.png[m matches
+Binary file [35mfrontend/uploads/profile_photos/user_1_1765799402.png[m matches
+Binary file [35mfrontend/uploads/profile_photos/user_24_1765732197.png[m matches

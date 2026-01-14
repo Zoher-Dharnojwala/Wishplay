@@ -1,0 +1,96 @@
+[
+  {
+    "id": "PR1",
+    "priority": 60,
+    "topic_flag": "present_overview",
+    "emotion_tags": ["neutral", "reflection", "hope"],
+    "prompt_variants": [
+      "How would you describe your life as it is right now?",
+      "What does your day-to-day life look like in this phase?",
+      "How would you sum up the place you're in today, emotionally or practically?",
+      "What feels most true about your life at this present moment?",
+      "When you think about your life today, what comes to mind first?"
+    ],
+    "followups": [
+      "Thank you — that gives a clear picture of where you are right now.",
+      "Your reflection helps anchor this moment in your story.",
+      "It’s meaningful to hear how you’re experiencing life today."
+    ]
+  },
+
+  {
+    "id": "PR2",
+    "priority": 61,
+    "topic_flag": "present_feelings",
+    "emotion_tags": ["joy", "stress", "nostalgia", "growth"],
+    "prompt_variants": [
+      "How have you been feeling lately in your day-to-day life?",
+      "What emotions tend to show up most for you recently?",
+      "How would you describe your emotional landscape these days?",
+      "Do your recent days feel more peaceful, stressful, or something in between?",
+      "What feelings have been most present for you in this season of life?"
+    ],
+    "followups": [
+      "Thank you for sharing — your emotional state matters.",
+      "That gives insight into how you’re carrying things right now.",
+      "Hearing how you feel helps shape where we go next."
+    ]
+  },
+
+  {
+    "id": "PR3",
+    "priority": 62,
+    "topic_flag": "current_priorities",
+    "emotion_tags": ["ambition", "hope", "values"],
+    "prompt_variants": [
+      "What matters most to you in life right now?",
+      "What are the priorities that guide your choices these days?",
+      "If you had to name your biggest focus in this moment of life, what would it be?",
+      "What are you currently working toward or protecting in your life?",
+      "Which parts of your life are getting most of your attention these days?"
+    ],
+    "followups": [
+      "Those priorities say a lot about where your heart is today.",
+      "It sounds like those focuses are really shaping your present path.",
+      "Thank you — that helps me understand what’s important to you right now."
+    ]
+  },
+
+  {
+    "id": "PR4",
+    "priority": 63,
+    "topic_flag": "present_support_system",
+    "emotion_tags": ["connection", "trust", "comfort"],
+    "prompt_variants": [
+      "Who supports you the most in your life these days?",
+      "Is there someone you rely on or feel grounded by right now?",
+      "Who are the people helping you navigate your present moment?",
+      "Do you feel supported in your life today? If so, by whom?",
+      "Who stands beside you most in this phase of your journey?"
+    ],
+    "followups": [
+      "Having support can make all the difference in how we move through life.",
+      "It sounds like those people play an important role for you.",
+      "Your present support system tells a lot about your connections."
+    ]
+  },
+
+  {
+    "id": "PR5",
+    "priority": 64,
+    "topic_flag": "present_reflection_and_growth",
+    "emotion_tags": ["growth", "reflection", "hope"],
+    "prompt_variants": [
+      "What have you been learning about yourself lately?",
+      "How has the present stage of life changed or taught you something new?",
+      "Is there a recent moment that made you reflect on who you're becoming?",
+      "What personal growth do you feel you're experiencing right now?",
+      "What insights about yourself have surfaced in this current season?"
+    ],
+    "followups": [
+      "Your reflections say a lot about your self-awareness today.",
+      "It’s powerful to hear how you’re evolving in the present moment.",
+      "Thank you — growth in the present shapes everything that comes next."
+    ]
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "id": "I1",
+    "priority": 7,
+    "topic_flag": "introduction_start",
+    "emotion_tags": ["warm", "inviting"],
+    "prompt_variants": [
+      "Hi, I’m Afi. Before we begin, could you share a little bit about yourself?",
+      "Hello! I’d love to start by learning about you. How would you describe yourself in your own words?",
+      "Let’s start simple — who are you, and what matters most to you right now?",
+      "It’s wonderful to meet you. Tell me a bit about who you are today.",
+      "Before we dive in, can you tell me a little about yourself — whatever comes to mind first?"
+    ],
+    "followups": [
+      "That’s a beautiful way to describe yourself.",
+      "Thank you for sharing that — it gives me a sense of who you are.",
+      "That’s lovely, I can already sense a bit of your personality shining through."
+    ]
+  },
+  {
+    "id": "I2",
+    "priority": 8,
+    "topic_flag": "daily_life_intro",
+    "emotion_tags": ["curious", "gentle"],
+    "prompt_variants": [
+      "What does a typical day in your life look like these days?",
+      "How do you usually spend your time during a normal day?",
+      "Could you walk me through what a regular day looks like for you?",
+      "What’s your daily rhythm like — what fills your days right now?",
+      "When you wake up in the morning, how do your days usually unfold?"
+    ],
+    "followups": [
+      "That sounds like a nice balance of activity and calm.",
+      "Thank you, that helps me picture your daily rhythm better.",
+      "I can sense there’s a meaningful flow to your days."
+    ]
+  },
+  {
+    "id": "I3",
+    "priority": 9,
+    "topic_flag": "comfort_level",
+    "emotion_tags": ["reassuring", "empathetic"],
+    "prompt_variants": [
+      "Before we go further, how comfortable do you feel talking about your life with me?",
+      "Do you feel at ease having these kinds of reflective conversations?",
+      "Would you say you’re comfortable opening up about personal experiences here?",
+      "How are you feeling about this conversation so far — comfortable, nervous, curious?",
+      "Would you like me to take things slowly or are you okay going a bit deeper?"
+    ],
+    "followups": [
+      "Thank you for being honest — your comfort matters most.",
+      "That’s completely okay; we’ll move at your pace.",
+      "I really appreciate your openness. We’ll take this gently together."
+    ]
+  },
+  {
+    "id": "I4",
+    "priority": 10,
+    "topic_flag": "conversation_tone_preference",
+    "emotion_tags": ["curious", "supportive"],
+    "prompt_variants": [
+      "Do you prefer a lighter, more casual chat, or a deeper, more reflective one?",
+      "Would you like me to keep our conversation easygoing, or explore deeper reflections?",
+      "Should I keep things more conversational or more introspective?",
+      "How would you like this conversation to feel — relaxed, reflective, or somewhere in between?",
+      "Do you want me to ask thought-provoking questions or keep things more open and gentle?"
+    ],
+    "followups": [
+      "Perfect, I’ll match the tone that feels right for you.",
+      "Got it — we’ll shape the conversation to fit your preference.",
+      "Thank you for sharing that — it helps me understand how to guide our flow."
+    ]
+  },
+  {
+    "id": "I5",
+    "priority": 11,
+    "topic_flag": "expectation_setting",
+    "emotion_tags": ["encouraging", "reassuring"],
+    "prompt_variants": [
+      "Before we begin, is there something you’re hoping to gain from our time together?",
+      "What would you like to get out of this conversation today?",
+      "Is there anything you’re hoping to reflect on or understand better through this talk?",
+      "Do you have a goal or feeling you’d like to reach during this session?",
+      "What do you hope this reflection brings you — peace, clarity, or just expression?"
+    ],
+    "followups": [
+      "That’s a wonderful intention — I’ll keep it in mind as we talk.",
+      "Thank you — that gives me a sense of what matters to you right now.",
+      "Beautiful. I’ll make sure our time together moves in that direction."
+    ]
+  }
+]

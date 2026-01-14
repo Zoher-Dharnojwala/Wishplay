@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wishplay • Life Questions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* --------------------- BASE --------------------- */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+    font-family:"Inter",sans-serif;
+    background:#f4f6fb;
+    color:#333;
+    display:flex;
+}
+body.dark{background:#0f1115;color:#eee;}
+
+/* --------------------- SIDEBAR --------------------- */
+aside{
+    width:260px;
+    background:#fff;
+    height:100vh;
+    position:fixed;
+    border-right:1px solid #ddd;
+    padding-top:80px;
+}
+body.dark aside{background:#1b1d24;border-color:#333;}
+
+.side-menu a{
+    display:block;
+    padding:15px 25px;
+    color:#333;
+    text-decoration:none;
+    font-weight:600;
+}
+.side-menu a:hover{background:#e9f4ff;color:#1ba1f2;}
+body.dark .side-menu a:hover{background:#2a2d36;color:#63b5ff;}
+
+/* --------------------- HEADER --------------------- */
+header{
+    position:fixed;
+    left:260px;
+    top:0;
+    width:calc(100% - 260px);
+    height:70px;
+    background:#fff;
+    border-bottom:1px solid #ddd;
+    padding:0 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:10;
+}
+body.dark header{background:#1b1d24;border-color:#333;}
+
+.logo{font-size:30px;font-weight:700;cursor:pointer;}
+.logo .w{color:#1ba1f2;}
+.logo .i{color:#7ecf27;}
+.logo .s{color:#ffc107;}
+.logo .h{color:#ff4081;}
+.logo .play{color:#444;}
+
+.theme-toggle{cursor:pointer;font-size:22px;}
+
+/* --------------------- MAIN CONTENT --------------------- */
+.content{
+    margin-left:260px;
+    margin-top:80px;
+    padding:30px;
+    width:calc(100% - 260px);
+}
+
+h1{font-size:28px;margin-bottom:20px;}
+
+/* TOP TOOLBAR */
+.toolbar{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+.search-box input{
+    padding:10px 15px;
+    width:260px;
+    border:1px solid #bbb;
+    border-radius:10px;
+}
+.pdf-btn{
+    padding:10px 20px;
+    background:#1ba1f2;
+    color:#fff;
+    border:none;
+    font-weight:600;
+    border-radius:8px;
+}
+.pdf-btn:hover{background:#1485c7;}
+
+/* --------------------- CATEGORY BLOCK --------------------- */
+.category-block{
+    margin-bottom:30px;
+    border-radius:20px;
+    overflow:hidden;
+    background:#ffffff;
+    box-shadow:0 4px 16px rgba(0,0,0,0.08);
+}
+body.dark .category-block{background:#1b1d24;}
+
+.category-header{
+    padding:18px 20px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    font-size:20px;
+    font-weight:700;
+    border-bottom:1px solid #eee;
+}
+body.dark .category-header{border-color:#333;}
+
+.category-icon{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#e8f2ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    margin-right:15px;
+}
+body.dark .category-icon{background:#222;}
+
+.category-title{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.rotate{
+    transform:rotate(90deg);
+    transition:0.2s;
+}
+
+/* COLLAPSIBLE CONTENT */
+.category-content{
+    display:none;
+    padding:20px;
+    animation:fadeIn 0.3s ease;
+}
+@keyframes fadeIn{
+    from{opacity:0;transform:translateY(10px);}
+    to{opacity:1;transform:translateY(0);}
+}
+
+/* CARD */
+.card{
+    padding:18px;
+    border-radius:12px;
+    background:#fff;
+    margin-bottom:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.06);
+}
+body.dark .card{background:#282c35;}
+
+.card small{opacity:0.6;}
+
+/* SHOW/HIDE BUTTON */
+.toggle-all-btn{
+    padding:8px 16px;
+    background:#ffc107;
+    color:#333;
+    border:none;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+    margin-bottom:25px;
+}
+.toggle-all-btn:hover{background:#e0a800;}
+
+/* DATE GROUP LABEL */
+.date-label{
+    margin-top:15px;
+    margin-bottom:10px;
+    font-size:14px;
+    font-weight:700;
+    opacity:0.7;
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<aside>
+    <nav class="side-menu">
+        <a href="index.html">🏠 Home</a>
+        <a href="lifequestions.html">📝 Life Questions</a>
+        <a href="profile.html">👤 Profile</a>
+        <a href="#" onclick="confirmLogout()">🚪 Sign Out</a>
+    </nav>
+</aside>
+
+<!-- HEADER -->
+<header>
+  <div class="logo" onclick="location.href='index.html'">
+      <span class="w">w</span><span class="i">i</span><span class="s">s</span><span class="h">h</span><span class="play">play</span>
+  </div>
+  <div class="theme-toggle" onclick="toggleTheme()">🌙</div>
+</header>
+
+<!-- MAIN CONTENT -->
+<div class="content">
+
+<h1>Life Questions History</h1>
+
+<div class="toolbar">
+    <div class="search-box">
+        <input id="searchInput" onkeyup="searchCards()" type="text" placeholder="Search questions...">
+    </div>
+    <button class="pdf-btn" onclick="window.print()">Export PDF</button>
+</div>
+
+<button class="toggle-all-btn" onclick="toggleAll()">Show All</button>
+
+<div id="historyList"></div>
+
+</div>
+
+<script>
+/* --------------------- ICON MAP --------------------- */
+const ICONS = {
+    "Introduction":"🌱",
+    "Wisdom":"🧠",
+    "Places":"📍",
+    "Early Childhood":"🧸",
+    "Teen":"🎧",
+    "Post Secondary":"🎓",
+    "Adulthood":"💼",
+    "Present":"⭐",
+    "Family":"👨‍👩‍👧‍👦"
+};
+
+/* --------------------- THEME --------------------- */
+function toggleTheme(){
+    document.body.classList.toggle("dark");
+    localStorage.setItem("wishplay-theme",
+        document.body.classList.contains("dark") ? "dark" : "light"
+    );
+}
+if(localStorage.getItem("wishplay-theme")==="dark"){
+    document.body.classList.add("dark");
+}
+
+/* --------------------- LOAD HISTORY --------------------- */
+document.addEventListener("DOMContentLoaded", loadHistory);
+
+async function loadHistory(){
+    const userId = localStorage.getItem("user_id") || "undefined";
+
+
+    if(!userId){
+        historyList.innerHTML = "No user logged in.";
+        return;
+    }
+
+    let res, data;
+    try {
+        res = await fetch(`http://127.0.0.1:8000/conversation/history/list?user_id=${userId}`);
+        data = await res.json();
+    } catch (e) {
+        historyList.innerHTML = "Error loading history.";
+        return;
+    }
+
+    // Backend returns a plain array, not {status, history}
+    // Correct: backend returns {status, history: [...]}
+    
+    const rows = data.history || [];
+
+    if(rows.length === 0){
+        historyList.innerHTML = "No conversations yet.";
+        return;
+    }
+
+
+
+    // ---------- GROUP BY CATEGORY ----------
+    const categoryGroups = {};
+    rows.forEach(row=>{
+        if(!categoryGroups[row.category]) categoryGroups[row.category] = [];
+        categoryGroups[row.category].push(row);
+    });
+
+    let html = "";
+    const ORDER = [
+        "Introduction","Wisdom","Places","Early Childhood",
+        "Teen","Post Secondary","Adulthood","Present","Family"
+    ];
+
+    ORDER.forEach(cat=>{
+        if(!categoryGroups[cat]) return;
+
+        const id = cat.replace(/\s+/g,"");
+
+        html += `
+        <div class="category-block">
+            <div class="category-header" onclick="toggleCategory('${id}')">
+                <div class="category-title">
+                    <div class="category-icon">${ICONS[cat]}</div>
+                    ${cat}
+                </div>
+                <div id="arrow-${id}" class="rotate">▶</div>
+            </div>
+            <div id="content-${id}" class="category-content">
+        `;
+
+        const grouped = groupByDate(categoryGroups[cat]);
+
+        Object.keys(grouped).forEach(dateLabel=>{
+            html += `<div class="date-label">${dateLabel}</div>`;
+            grouped[dateLabel].forEach(item=>{
+                html += `
+                    <div class="card">
+                        <p><b>Q:</b> ${item.question}</p>
+                        <p><b>A:</b> ${item.answer_text}</p>
+                        <small>${new Date(item.created_at).toLocaleString()}</small>
+                    </div>
+                `;
+            });
+        });
+
+        html += `</div></div>`;
+    });
+
+    historyList.innerHTML = html;
+}
+
+/* --------------------- CATEGORY COLLAPSE --------------------- */
+function toggleCategory(id){
+    const content = document.getElementById(`content-${id}`);
+    const arrow = document.getElementById(`arrow-${id}`);
+
+    if(content.style.display === "block"){
+        content.style.display = "none";
+        arrow.style.transform = "rotate(90deg)";
+    }else{
+        content.style.display = "block";
+        arrow.style.transform = "rotate(0deg)";
+    }
+}
+
+function toggleAll(){
+    const btn = document.querySelector(".toggle-all-btn");
+    const blocks = document.querySelectorAll(".category-content");
+
+    if(btn.textContent.includes("Show")){
+        blocks.forEach(b=>b.style.display="block");
+        btn.textContent = "Hide All";
+    }else{
+        blocks.forEach(b=>b.style.display="none");
+        btn.textContent = "Show All";
+    }
+}
+
+/* --------------------- DATE GROUPING --------------------- */
+function groupByDate(rows){
+    const today = new Date().toDateString();
+    const yesterday = new Date(Date.now() - 86400000).toDateString();
+
+    const groups = {
+        "Today":[],
+        "Yesterday":[],
+        "This Month":[],
+        "Older":[]
+    };
+
+    rows.forEach(r=>{
+        const date = new Date(r.created_at);
+        const dateString = date.toDateString();
+
+        if(dateString === today) groups["Today"].push(r);
+        else if(dateString === yesterday) groups["Yesterday"].push(r);
+        else if(date.getMonth() === new Date().getMonth() &&
+                date.getFullYear() === new Date().getFullYear())
+            groups["This Month"].push(r);
+        else groups["Older"].push(r);
+    });
+
+    return groups;
+}
+
+/* --------------------- SEARCH --------------------- */
+function searchCards(){
+    const q = document.getElementById("searchInput").value.toLowerCase();
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card=>{
+        card.style.display = card.innerText.toLowerCase().includes(q) ? "block" : "none";
+    });
+}
+
+/* --------------------- LOGOUT --------------------- */
+function confirmLogout(){
+    window.location.href = "backend/mysql/logout.php";
+}
+</script>
+
+</body>
+</html>

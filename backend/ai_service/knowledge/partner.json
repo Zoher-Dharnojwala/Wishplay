@@ -1,0 +1,96 @@
+[
+  {
+    "id": "PT1",
+    "priority": 70,
+    "topic_flag": "current_partner_intro",
+    "emotion_tags": ["warm", "gentle"],
+    "prompt_variants": [
+      "Would you like to tell me a little about your partner?",
+      "How would you describe the person you're currently with?",
+      "What comes to mind first when you think about your partner?",
+      "How did your relationship with your partner begin?",
+      "What do you appreciate most about them?"
+    ],
+    "followups": [
+      "You speak about them with real warmth.",
+      "Thank you — that gives me a sense of who they are in your life.",
+      "It’s clear this connection means a lot to you."
+    ]
+  },
+
+  {
+    "id": "PT2",
+    "priority": 71,
+    "topic_flag": "partner_shared_moments",
+    "emotion_tags": ["nostalgic", "tender"],
+    "prompt_variants": [
+      "What is one of your favorite memories with your partner?",
+      "Is there a moment together that always makes you smile?",
+      "What experiences have you shared that feel especially meaningful?",
+      "Do you remember a time you both felt deeply connected?",
+      "What memories stand out when you think of your time together?"
+    ],
+    "followups": [
+      "That sounds like a cherished moment.",
+      "You bring that memory to life beautifully.",
+      "There’s a lot of affection in the way you describe that."
+    ]
+  },
+
+  {
+    "id": "PT3",
+    "priority": 72,
+    "topic_flag": "partner_growth",
+    "emotion_tags": ["reflective", "encouraging"],
+    "prompt_variants": [
+      "How has your relationship evolved over time?",
+      "What have you and your partner taught each other?",
+      "Were there moments that strengthened your bond?",
+      "How do you feel your connection has changed or deepened with time?",
+      "In what ways has your relationship influenced who you are today?"
+    ],
+    "followups": [
+      "That shows a lot of growth and understanding between you.",
+      "It’s beautiful how you recognize the changes in your relationship.",
+      "Your reflections highlight the depth of your bond."
+    ]
+  },
+
+  {
+    "id": "PT4",
+    "priority": 73,
+    "topic_flag": "partner_challenges",
+    "emotion_tags": ["empathetic", "supportive"],
+    "prompt_variants": [
+      "What challenges have you and your partner faced together?",
+      "Was there a moment that tested your relationship?",
+      "How do you both handle disagreements or tough times?",
+      "What helped you stay connected during difficult periods?",
+      "Did facing challenges bring you closer in any way?"
+    ],
+    "followups": [
+      "That sounds like it required patience and care from both of you.",
+      "It’s clear that you’ve navigated challenges thoughtfully.",
+      "Sometimes those tough moments strengthen a relationship in powerful ways."
+    ]
+  },
+
+  {
+    "id": "PT5",
+    "priority": 74,
+    "topic_flag": "partner_reflection",
+    "emotion_tags": ["grateful", "warm"],
+    "prompt_variants": [
+      "What does your partner mean to you at this stage of your life?",
+      "What do you value most in your relationship today?",
+      "If you had to describe what makes your bond special, what would you say?",
+      "How do you feel your partner has influenced your journey?",
+      "What feelings come up when you reflect on your relationship?"
+    ],
+    "followups": [
+      "That’s a heartfelt and honest reflection.",
+      "It’s touching to hear how much this relationship means to you.",
+      "Your words truly show the depth of your connection."
+    ]
+  }
+]

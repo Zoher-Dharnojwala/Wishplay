@@ -1,0 +1,96 @@
+[
+  {
+    "id": "T1",
+    "priority": 30,
+    "topic_flag": "teen_identity",
+    "emotion_tags": ["growth", "curiosity", "reflective"],
+    "prompt_variants": [
+      "How would you describe the kind of person you were as a teenager?",
+      "What do you remember most about who you were during your teens?",
+      "If you had to sum up your teenage self in a sentence, what would you say?",
+      "What kind of personality did you have when you were growing up through adolescence?",
+      "How do you think your teenage years shaped the person you eventually became?"
+    ],
+    "followups": [
+      "It sounds like that phase played a meaningful role in shaping your identity.",
+      "Your teenage years clearly left an imprint on who you are today.",
+      "That’s a powerful reflection — thank you for sharing."
+    ]
+  },
+
+  {
+    "id": "T2",
+    "priority": 31,
+    "topic_flag": "teen_challenges",
+    "emotion_tags": ["stress", "sadness", "resilience"],
+    "prompt_variants": [
+      "What challenges did you face during your teenage years?",
+      "Was there a difficult experience in your teens that shaped you?",
+      "Can you recall a tough moment from your adolescence that impacted you deeply?",
+      "Did you go through any struggles at school, at home, or within yourself as a teenager?",
+      "Is there something from your teenage years that was especially hard but taught you something important?"
+    ],
+    "followups": [
+      "Thank you for opening up — that sounds like a heavy experience.",
+      "That must have taken strength to get through.",
+      "Your resilience really shows in how you talk about it."
+    ]
+  },
+
+  {
+    "id": "T3",
+    "priority": 32,
+    "topic_flag": "teen_friendships",
+    "emotion_tags": ["joy", "connection", "nostalgia"],
+    "prompt_variants": [
+      "Who were the people you felt closest to during your teenage years?",
+      "Did you have a best friend or a group you connected with deeply?",
+      "Who made life meaningful or fun for you during your teens?",
+      "Was there someone who really understood you in that phase of your life?",
+      "If you think back to your teen friendships, who stands out the most?"
+    ],
+    "followups": [
+      "Those kinds of bonds often shape our sense of belonging.",
+      "It sounds like those connections meant a lot to you.",
+      "The way you talk about them shows the impact they had."
+    ]
+  },
+
+  {
+    "id": "T4",
+    "priority": 33,
+    "topic_flag": "teen_passions",
+    "emotion_tags": ["joy", "creativity", "ambition"],
+    "prompt_variants": [
+      "What were you passionate about as a teenager?",
+      "Did you have hobbies, dreams, or interests that defined your adolescence?",
+      "What sparked your curiosity or excitement during your teen years?",
+      "Were there activities that made you feel alive or inspired as a teen?",
+      "If I asked your teenage self what they loved doing most, what would they say?"
+    ],
+    "followups": [
+      "That passion sounds like it was a big part of who you were.",
+      "It’s amazing how those early loves stay with us in different ways.",
+      "You speak about it with real energy — that says a lot."
+    ]
+  },
+
+  {
+    "id": "T5",
+    "priority": 34,
+    "topic_flag": "teen_family_dynamics",
+    "emotion_tags": ["neutral", "nostalgic", "complex"],
+    "prompt_variants": [
+      "How would you describe your relationship with your family during your teenage years?",
+      "Did things at home feel supportive, tense, distant, or something else during that time?",
+      "How did your family influence your teenage self?",
+      "If you think back to your home life as a teen, what stands out the most?",
+      "Were there meaningful shifts in your family dynamics as you grew older?"
+    ],
+    "followups": [
+      "Family dynamics in our teen years often shape our confidence and worldview.",
+      "The way you describe it paints a clear picture of that period.",
+      "Thank you for sharing that — it’s often not an easy thing to talk about."
+    ]
+  }
+]

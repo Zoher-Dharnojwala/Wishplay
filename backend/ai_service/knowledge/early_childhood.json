@@ -1,0 +1,96 @@
+[
+  {
+    "id": "E1",
+    "priority": 20,
+    "topic_flag": "earliest_memory",
+    "emotion_tags": ["nostalgic", "soft", "reflective"],
+    "prompt_variants": [
+      "What is the earliest memory you can recall from your childhood?",
+      "When you think back to being very young, what’s the first moment that comes to mind?",
+      "Can you share one of your earliest memories — even if it feels small or blurry?",
+      "What do you think is the earliest thing you remember about your childhood?",
+      "If you had to pick your very first memory, what would it be?"
+    ],
+    "followups": [
+      "Early memories can be so fragile but so meaningful — thank you for sharing that.",
+      "It’s interesting how even faint memories can carry deep emotion.",
+      "That moment clearly stayed with you for a reason."
+    ]
+  },
+
+  {
+    "id": "E2",
+    "priority": 21,
+    "topic_flag": "childhood_person",
+    "emotion_tags": ["warm", "joyful", "connected"],
+    "prompt_variants": [
+      "Who was the person you felt closest to as a child?",
+      "Was there someone in your early years who made you feel especially safe or loved?",
+      "Who played a big role in your childhood — someone you still think about today?",
+      "Was there a person who shaped your early experiences in a meaningful way?",
+      "Can you tell me about someone from your childhood who mattered a lot to you?"
+    ],
+    "followups": [
+      "They clearly had a real impact on you.",
+      "Those kinds of connections shape us in beautiful ways.",
+      "I can hear how special they were in your life."
+    ]
+  },
+
+  {
+    "id": "E3",
+    "priority": 22,
+    "topic_flag": "childhood_happiness",
+    "emotion_tags": ["joy", "playful", "light"],
+    "prompt_variants": [
+      "What made you happiest when you were a child?",
+      "Did you have a favorite activity or game growing up?",
+      "When you think of yourself as a child, what brought you the most joy?",
+      "Was there something you always looked forward to doing as a kid?",
+      "Can you tell me about something from your early years that made you smile a lot?"
+    ],
+    "followups": [
+      "That sounds full of joy and simplicity.",
+      "It’s lovely hearing what made you happy back then.",
+      "Those small joys often stay with us forever."
+    ]
+  },
+
+  {
+    "id": "E4",
+    "priority": 23,
+    "topic_flag": "childhood_challenge",
+    "emotion_tags": ["sadness", "struggle", "resilience"],
+    "prompt_variants": [
+      "Did you face any challenges or difficult moments when you were young?",
+      "Was there something you struggled with during your childhood?",
+      "Can you remember a tough moment from your early years that stayed with you?",
+      "Were there obstacles you had to overcome as a young child?",
+      "Is there a difficult childhood memory you’re comfortable sharing with me?"
+    ],
+    "followups": [
+      "Thank you for trusting me with that — it takes courage.",
+      "That must have been hard to go through.",
+      "Your resilience from those early challenges really shows."
+    ]
+  },
+
+  {
+    "id": "E5",
+    "priority": 24,
+    "topic_flag": "childhood_home_environment",
+    "emotion_tags": ["nostalgic", "neutral", "warm"],
+    "prompt_variants": [
+      "How would you describe the environment you grew up in?",
+      "Was your childhood home peaceful, chaotic, warm — how did it feel to you?",
+      "What was the overall atmosphere of your home like when you were young?",
+      "If someone walked into your childhood home, what would they have noticed first?",
+      "Did your early home feel supportive and comforting, or was it more complicated?"
+    ],
+    "followups": [
+      "That environment clearly shaped a part of who you became.",
+      "Thank you for describing that — it paints a vivid picture.",
+      "It sounds like those early surroundings were meaningful in their own way."
+    ]
+  }
+]
