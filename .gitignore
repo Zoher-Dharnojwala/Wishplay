@@ -13,3 +13,8 @@ frontend/backend/google_callback.php
 # OS / noise
 .DS_Store
 Thumbs.db
+
+# Python virtual environments
+venv/
+.venv/
+backend/venv/
